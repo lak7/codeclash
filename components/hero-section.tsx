@@ -3,25 +3,59 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Calendar, MapPin, Clock, Users, ChevronDown } from "lucide-react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
+import {
+  Calendar,
+  MapPin,
+  Clock,
+  Users,
+  Triangle,
+  Square,
+  Circle,
+  ChevronDown,
+} from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 
 export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
 
-  // Parallax effect values
+  // Enhanced parallax effect values
   const backgroundY = useTransform(scrollY, [0, 500], [0, 150]);
-  const titleY = useTransform(scrollY, [0, 500], [0, -50]);
-  const subtitleY = useTransform(scrollY, [0, 500], [0, -30]);
-  const buttonY = useTransform(scrollY, [0, 500], [0, -10]);
-  const cardsY = useTransform(scrollY, [0, 500], [0, 20]);
-  const symbolsScale = useTransform(scrollY, [0, 300], [1, 1.2]);
-  const symbolsRotate = useTransform(scrollY, [0, 300], [0, 10]);
+  const titleY = useTransform(scrollY, [0, 500], [0, -70]);
+  const titleScale = useTransform(scrollY, [0, 300], [1, 0.9]);
+  const subtitleY = useTransform(scrollY, [0, 500], [0, -40]);
+  const buttonY = useTransform(scrollY, [0, 500], [0, -20]);
+  const cardsY = useTransform(scrollY, [0, 500], [0, 30]);
+  const symbolsScale = useTransform(scrollY, [0, 300], [1, 1.3]);
+  const symbolsRotate = useTransform(scrollY, [0, 300], [0, 15]);
   const opacitySymbols = useTransform(scrollY, [0, 300], [1, 0.6]);
+  const scrollIndicatorOpacity = useTransform(scrollY, [0, 150], [1, 0]);
+
+  // Mouse parallax effect for cards
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (sectionRef.current) {
+        const { clientX, clientY } = e;
+        const { width, height, left, top } =
+          sectionRef.current.getBoundingClientRect();
+        const x = (clientX - left) / width - 0.5;
+        const y = (clientY - top) / height - 0.5;
+        setMousePosition({ x, y });
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   useEffect(() => {
     setIsMounted(true);
@@ -34,82 +68,222 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full h-screen flex flex-col items-center justify-center relative overflow-hidden"
+      className="w-full min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
     >
-      {/* Floating Shapes */}
+      {/* Enhanced Floating Shapes */}
       <div className="absolute inset-0 z-5">
-        <FloatingShapes count={9} />
+        <FloatingShapes count={12} />
       </div>
 
-      {/* Sparkles effect */}
+      {/* Enhanced Sparkles effect */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         <SparklesCore
           id="tsparticles"
           background="transparent"
           minSize={0.6}
-          maxSize={1.4}
-          particleDensity={70}
+          maxSize={1.8}
+          particleDensity={100}
           className="w-full h-full"
           particleColor="#ec4899"
         />
       </div>
 
-      {/* Background layers with parallax */}
+      {/* Background layers with enhanced parallax */}
       <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
         <div className="absolute inset-0 bg-black">
-          {/* Dotted pattern overlay */}
+          {/* Improved dotted pattern overlay */}
           <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0 opacity-40"
             style={{
               backgroundImage:
-                "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
+                "radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)",
+              backgroundSize: "25px 25px",
             }}
           ></div>
 
-          {/* Gradient beams */}
+          {/* Enhanced gradient beams */}
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-pink-500/0 via-pink-500/30 to-pink-500/0 blur-sm"></div>
-            <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-pink-500/0 via-pink-500/20 to-pink-500/0 blur-sm"></div>
-            <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-pink-500/0 via-pink-500/20 to-pink-500/0 blur-sm"></div>
+            <div className="absolute top-0 left-1/4 w-[2px] h-full bg-gradient-to-b from-pink-500/0 via-pink-500/40 to-pink-500/0 blur-[3px]"></div>
+            <div className="absolute top-0 right-1/3 w-[2px] h-full bg-gradient-to-b from-pink-500/0 via-pink-500/30 to-pink-500/0 blur-[3px]"></div>
+            <div className="absolute top-1/3 left-0 w-full h-[2px] bg-gradient-to-r from-pink-500/0 via-pink-500/30 to-pink-500/0 blur-[3px]"></div>
+
+            {/* New diagonal beams */}
+            <div className="absolute top-0 left-0 w-[70%] h-[2px] transform rotate-45 bg-gradient-to-r from-pink-500/0 via-pink-500/20 to-pink-500/0 blur-[3px]"></div>
+            <div className="absolute bottom-0 right-0 w-[70%] h-[2px] transform -rotate-45 bg-gradient-to-r from-pink-500/0 via-pink-500/20 to-pink-500/0 blur-[3px]"></div>
           </div>
         </div>
       </motion.div>
 
+      {/* New glow orbs */}
+      <div className="absolute inset-0 z-10">
+        <div className="absolute top-1/4 left-1/5 w-[200px] h-[200px] rounded-full bg-pink-500/5 blur-[80px]"></div>
+        <div className="absolute bottom-1/4 right-1/5 w-[300px] h-[300px] rounded-full bg-pink-500/5 blur-[100px]"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-pink-500/5 blur-[120px]"></div>
+      </div>
+
       {/* Squid Game symbols with parallax */}
       <motion.div
-        className="absolute top-10 right-10 z-20 hidden md:block"
+        className="absolute top-20 right-20 z-20 hidden md:block"
         style={{
           scale: symbolsScale,
           rotate: symbolsRotate,
           opacity: opacitySymbols,
         }}
-      ></motion.div>
+      >
+        <div className="relative">
+          <Triangle
+            className="h-16 w-16 text-pink-500/50 absolute -top-8 -left-8"
+            fill="rgba(236, 72, 153, 0.05)"
+            strokeWidth={1.5}
+          />
+        </div>
+      </motion.div>
 
-      {/* Main content with parallax */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center">
-        <motion.div className="mb-4" style={{ y: titleY }}>
-          <h1 className="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-400 text-center leading-none tracking-tight">
+      <motion.div
+        className="absolute bottom-40 left-20 z-20 hidden md:block"
+        style={{
+          scale: symbolsScale,
+          rotate: symbolsRotate,
+          opacity: opacitySymbols,
+        }}
+      >
+        <div className="relative">
+          <Circle
+            className="h-20 w-20 text-pink-500/50 absolute -top-10 -left-10"
+            fill="rgba(236, 72, 153, 0.05)"
+            strokeWidth={1.5}
+          />
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute top-40 left-[15%] z-20 hidden md:block"
+        style={{
+          scale: symbolsScale,
+          rotate: symbolsRotate,
+          opacity: opacitySymbols,
+        }}
+      >
+        <div className="relative">
+          <Square
+            className="h-14 w-14 text-pink-500/50 absolute -top-7 -left-7"
+            fill="rgba(236, 72, 153, 0.05)"
+            strokeWidth={1.5}
+          />
+        </div>
+      </motion.div>
+
+      {/* Large background symbol */}
+      <div className="absolute right-0 top-0 z-5 opacity-10 hidden lg:block">
+        <Triangle
+          className="h-[400px] w-[400px] text-pink-500/20"
+          fill="none"
+          strokeWidth={0.5}
+        />
+      </div>
+
+      <div className="absolute left-0 bottom-0 z-5 opacity-10 hidden lg:block">
+        <Circle
+          className="h-[350px] w-[350px] text-pink-500/20"
+          fill="none"
+          strokeWidth={0.5}
+        />
+      </div>
+
+      <div className="absolute right-[10%] bottom-[20%] z-5 opacity-10 hidden lg:block">
+        <Square
+          className="h-[250px] w-[250px] text-pink-500/20"
+          fill="none"
+          strokeWidth={0.5}
+        />
+      </div>
+
+      {/* Main content with enhanced parallax */}
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center py-20">
+        <motion.div
+          className="mb-4 relative"
+          style={{ y: titleY, scale: titleScale }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Decorative symbols around title */}
+          <div className="absolute -top-14 -left-14 opacity-70 hidden md:block">
+            <Triangle className="h-10 w-10 text-pink-500/80" strokeWidth={2} />
+          </div>
+          <div className="absolute -bottom-14 -right-14 opacity-70 hidden md:block">
+            <Circle className="h-10 w-10 text-pink-500/80" strokeWidth={2} />
+          </div>
+          <div className="absolute -top-10 -right-10 opacity-70 hidden md:block">
+            <Square className="h-8 w-8 text-pink-500/80" strokeWidth={2} />
+          </div>
+
+          <h1 className="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-pink-500 to-pink-300 text-center leading-none tracking-tight">
             CodeClash 2.0
           </h1>
-          <div className="h-1 w-40 mx-auto bg-gradient-to-r from-pink-500/0 via-pink-500 to-pink-500/0 mt-4 blur-sm"></div>
+          <div className="h-1 w-40 mx-auto bg-gradient-to-r from-pink-500/0 via-pink-500 to-pink-500/0 mt-4 blur-[6px]"></div>
+
+          {/* Added animated glow under the title */}
+          <motion.div
+            className="w-64 h-1 bg-pink-500/50 rounded-full mx-auto mt-4 blur-[8px]"
+            animate={{
+              width: ["60%", "80%", "60%"],
+              opacity: [0.4, 0.8, 0.4],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
         </motion.div>
 
         <motion.p
           className="text-xl md:text-2xl font-light mb-12 text-white/80 text-center max-w-xl"
           style={{ y: subtitleY }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
         >
           The Ultimate 24-Hour Hackathon
         </motion.p>
 
-        <motion.div className="mb-16" style={{ y: buttonY }}>
+        <motion.div
+          className="mb-16 relative"
+          style={{ y: buttonY }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          {/* Symbol decorations around button */}
+          <div className="absolute -left-10 top-1/2 transform -translate-y-1/2 opacity-60 hidden lg:block">
+            <Triangle className="h-6 w-6 text-pink-500/80" strokeWidth={2} />
+          </div>
+          <div className="absolute -right-10 top-1/2 transform -translate-y-1/2 opacity-60 hidden lg:block">
+            <Circle className="h-6 w-6 text-pink-500/80" strokeWidth={2} />
+          </div>
+
           <Button
             size="lg"
             className="bg-pink-500 hover:bg-pink-600 text-white border-none px-10 py-7 text-lg rounded-md relative group overflow-hidden"
           >
             <span className="relative z-10">Register Now</span>
             <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span className="absolute -inset-px bg-gradient-to-r from-pink-400 to-pink-600 opacity-50 group-hover:opacity-70 blur-md transition-opacity duration-300 -z-10"></span>
+            <span className="absolute -inset-px bg-gradient-to-r from-pink-400 to-pink-600 opacity-50 group-hover:opacity-90 blur-md transition-opacity duration-300 -z-10"></span>
+
+            {/* Added pulsing effect */}
+            <motion.span
+              className="absolute inset-0 bg-pink-400/20 rounded-md"
+              animate={{
+                scale: [1, 1.05, 1],
+                opacity: [0, 0.5, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
           </Button>
         </motion.div>
 
@@ -125,41 +299,93 @@ export default function HeroSection() {
               icon: <Calendar className="h-5 w-5" />,
               title: "Dates",
               content: "April 26-27, 2025",
+              symbol: (
+                <Triangle
+                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
+                  strokeWidth={1}
+                />
+              ),
             },
             {
               icon: <MapPin className="h-5 w-5" />,
               title: "Venue",
               content: "To be announced",
+              symbol: (
+                <Circle
+                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
+                  strokeWidth={1}
+                />
+              ),
             },
             {
               icon: <Clock className="h-5 w-5" />,
               title: "Duration",
               content: "24 Hours of Hacking",
+              symbol: (
+                <Square
+                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
+                  strokeWidth={1}
+                />
+              ),
             },
             {
               icon: <Users className="h-5 w-5" />,
               title: "Participants",
               content: "Open to All",
+              symbol: (
+                <Triangle
+                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
+                  strokeWidth={1}
+                />
+              ),
             },
           ].map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-black/30 backdrop-blur-md border border-pink-500/20 rounded-md p-5 hover:border-pink-500/40 transition-all duration-300 group relative overflow-hidden"
+              className="bg-black/30 backdrop-blur-md border border-pink-500/20 rounded-md p-5 hover:border-pink-500/60 transition-all duration-300 group relative overflow-hidden"
+              style={{
+                transform:
+                  mousePosition.x !== 0 && mousePosition.y !== 0
+                    ? `perspective(1000px) rotateY(${
+                        mousePosition.x * 10
+                      }deg) rotateX(${-mousePosition.y * 10}deg)`
+                    : "perspective(1000px)",
+                transformStyle: "preserve-3d",
+              }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+              {/* Added highlight effect */}
+              <div className="absolute -inset-4 bg-pink-500/5 rounded-md blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Squid Game symbol in each card */}
+              {item.symbol}
+
               <div className="text-pink-500 font-medium mb-2 text-sm flex items-center gap-2">
                 {item.icon}
                 <span>{item.title}</span>
               </div>
               <div className="text-white text-lg">{item.content}</div>
-            </div>
+
+              {/* Added light reflection effect */}
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out -skew-x-12"
+                style={{
+                  transform: "translateX(-100%)",
+                  animation: "shine 3s infinite",
+                }}
+              ></div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Enhanced scroll indicator with Squid Game symbols */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
+        style={{ opacity: scrollIndicatorOpacity }}
         animate={{ y: [0, 10, 0] }}
         transition={{
           repeat: Number.POSITIVE_INFINITY,
@@ -167,8 +393,38 @@ export default function HeroSection() {
           ease: "easeInOut",
         }}
       >
-        <ChevronDown className="h-8 w-8 text-pink-500/70" />
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <Triangle className="h-4 w-4 text-pink-500/70" />
+            <Circle className="h-4 w-4 text-pink-500/70" />
+            <Square className="h-4 w-4 text-pink-500/70" />
+          </div>
+          <span className="text-pink-500/70 text-sm mb-2">
+            Scroll to explore
+          </span>
+          <ChevronDown className="h-8 w-8 text-pink-500/70" />
+        </motion.div>
       </motion.div>
+
+      {/* Added global CSS animation for card shine effect */}
+      <style jsx global>{`
+        @keyframes shine {
+          0% {
+            transform: translateX(-100%) skewX(-12deg);
+          }
+          30% {
+            transform: translateX(100%) skewX(-12deg);
+          }
+          100% {
+            transform: translateX(100%) skewX(-12deg);
+          }
+        }
+      `}</style>
     </section>
   );
 }
