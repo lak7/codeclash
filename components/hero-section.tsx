@@ -22,6 +22,68 @@ import {
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 
+// Countdown timer component
+const CountdownTimer = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Set target date to April 26, 2025
+    const targetDate = new Date("April 26, 2025 00:00:00").getTime();
+
+    const calculateTimeLeft = () => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / (1000 * 60)) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      } else {
+        // Event has started
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    // Initial calculation
+    calculateTimeLeft();
+
+    // Set up interval to update every second
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    // Clean up interval on unmount
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="flex justify-center items-center gap-4 mb-12">
+      {[
+        { value: timeLeft.days, label: "Days" },
+        { value: timeLeft.hours, label: "Hours" },
+        { value: timeLeft.minutes, label: "Minutes" },
+        { value: timeLeft.seconds, label: "Seconds" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="flex flex-col items-center bg-black/40 backdrop-blur-md border border-pink-500/30 rounded-md p-3 min-w-[85px]"
+        >
+          <div className="text-2xl md:text-3xl font-bold text-white">
+            {item.value < 10 ? `0${item.value}` : item.value}
+          </div>
+          <div className="text-xs md:text-sm text-pink-400">{item.label}</div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -239,7 +301,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.p
-          className="text-xl md:text-2xl font-light mb-12 text-white/80 text-center max-w-xl"
+          className="text-xl md:text-2xl font-light mb-6 text-white/80 text-center max-w-xl"
           style={{ y: subtitleY }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -248,12 +310,22 @@ export default function HeroSection() {
           The Ultimate 24-Hour Hackathon
         </motion.p>
 
+        {/* Countdown Timer */}
+        <motion.div
+          className="mb-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          <CountdownTimer />
+        </motion.div>
+
         <motion.div
           className="mb-16 relative"
           style={{ y: buttonY }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
         >
           {/* Symbol decorations around button */}
           <div className="absolute -left-10 top-1/2 transform -translate-y-1/2 opacity-60 hidden lg:block">
@@ -292,7 +364,7 @@ export default function HeroSection() {
           style={{ y: cardsY }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
         >
           {[
             {
