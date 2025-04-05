@@ -3,7 +3,7 @@ import { Trophy, Users, Lightbulb } from "lucide-react";
 
 export default function ExpectationsSection() {
   return (
-    <section id="expectations" className="w-full py-24 relative">
+    <section id="expectations" className="w-full py-10 relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-pink-900/10 via-transparent to-transparent opacity-30"></div>
 
       <div className="container mx-auto px-4 relative z-10">

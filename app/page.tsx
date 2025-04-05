@@ -3,7 +3,9 @@ import AboutSection from "@/components/about-section";
 import TracksSection from "@/components/tracks-section";
 import ExpectationsSection from "@/components/expectations-section";
 import PerksSection from "@/components/perks-section";
+import SponsorsSection from "@/components/sponsors-section";
 import ParticipationSection from "@/components/participation-section";
+import PrizePoolSection from "@/components/prize-pool-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -17,6 +19,12 @@ export default function Home() {
 
       {/* Tracks Section */}
       <TracksSection />
+
+      {/* Prize Pool Section */}
+      <PrizePoolSection />
+
+      {/* Sponsors Section */}
+      <SponsorsSection />
 
       {/* Expectations Section */}
       <ExpectationsSection />

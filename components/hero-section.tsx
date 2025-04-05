@@ -382,35 +382,6 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Enhanced scroll indicator with Squid Game symbols */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
-        style={{ opacity: scrollIndicatorOpacity }}
-        animate={{ y: [0, 10, 0] }}
-        transition={{
-          repeat: Number.POSITIVE_INFINITY,
-          duration: 2,
-          ease: "easeInOut",
-        }}
-      >
-        <motion.div
-          className="flex flex-col items-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <Triangle className="h-4 w-4 text-pink-500/70" />
-            <Circle className="h-4 w-4 text-pink-500/70" />
-            <Square className="h-4 w-4 text-pink-500/70" />
-          </div>
-          <span className="text-pink-500/70 text-sm mb-2">
-            Scroll to explore
-          </span>
-          <ChevronDown className="h-8 w-8 text-pink-500/70" />
-        </motion.div>
-      </motion.div>
-
       {/* Added global CSS animation for card shine effect */}
       <style jsx global>{`
         @keyframes shine {
