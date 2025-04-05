@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,55 +31,71 @@ const CountdownTimer = () => {
     seconds: 0,
   });
 
+  // Target date - April 26, 2025
+  const targetDate = useMemo(
+    () => new Date("April 26, 2025 00:00:00").getTime(),
+    []
+  );
+
   useEffect(() => {
-    // Set target date to April 26, 2025
-    const targetDate = new Date("April 26, 2025 00:00:00").getTime();
+    let animationFrameId: number;
+    let previousTime = 0;
 
-    const calculateTimeLeft = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
+    const calculateTimeLeft = (timestamp: number) => {
+      // Only update if enough time has passed (approximately 1 second)
+      // This avoids excessive re-renders while keeping precision
+      if (timestamp - previousTime >= 1000 || previousTime === 0) {
+        previousTime = timestamp;
 
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / (1000 * 60)) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      } else {
-        // Event has started
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        const now = Date.now();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+          setTimeLeft({
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / (1000 * 60)) % 60),
+            seconds: Math.floor((difference / 1000) % 60),
+          });
+        } else {
+          // Event has started
+          setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        }
       }
+
+      // Request next frame
+      animationFrameId = requestAnimationFrame(calculateTimeLeft);
     };
 
-    // Initial calculation
-    calculateTimeLeft();
+    // Start the animation loop
+    animationFrameId = requestAnimationFrame(calculateTimeLeft);
 
-    // Set up interval to update every second
-    const timer = setInterval(calculateTimeLeft, 1000);
+    // Clean up
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [targetDate]);
 
-    // Clean up interval on unmount
-    return () => clearInterval(timer);
+  // Time unit components with memoization for better performance
+  const TimeUnit = useMemo(() => {
+    return ({ value, label }: { value: number; label: string }) => (
+      <div className="flex flex-col items-center bg-black/40 backdrop-blur-md border border-pink-500/30 rounded-md p-3 min-w-[85px]">
+        <div className="text-2xl md:text-3xl font-bold text-white">
+          {value < 10 ? `0${value}` : value}
+        </div>
+        <div className="text-xs md:text-sm text-pink-400">{label}</div>
+      </div>
+    );
   }, []);
 
   return (
-    <div className="flex justify-center items-center gap-4 mb-12">
-      {[
-        { value: timeLeft.days, label: "Days" },
-        { value: timeLeft.hours, label: "Hours" },
-        { value: timeLeft.minutes, label: "Minutes" },
-        { value: timeLeft.seconds, label: "Seconds" },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center bg-black/40 backdrop-blur-md border border-pink-500/30 rounded-md p-3 min-w-[85px]"
-        >
-          <div className="text-2xl md:text-3xl font-bold text-white">
-            {item.value < 10 ? `0${item.value}` : item.value}
-          </div>
-          <div className="text-xs md:text-sm text-pink-400">{item.label}</div>
-        </div>
-      ))}
+    <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
+      <TimeUnit value={timeLeft.days} label="Days" />
+      <TimeUnit value={timeLeft.hours} label="Hours" />
+      <TimeUnit value={timeLeft.minutes} label="Minutes" />
+      <TimeUnit value={timeLeft.seconds} label="Seconds" />
     </div>
   );
 };
