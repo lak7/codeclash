@@ -1,16 +1,19 @@
 import { CircleDollarSign } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SponsorsSection() {
   const sponsors = [
     {
       name: "Codecrafters",
       logo: "/codecraft.png",
+      website: "https://codecrafters.io",
     },
-    {
-      name: "Geek Room",
-      logo: "/geek.png",
-    },
+    // {
+    //   name: "Geek Room",
+    //   logo: "/geek.png",
+    //   website: "https://geekroom.dev",
+    // },
   ];
 
   return (
@@ -51,15 +54,25 @@ export default function SponsorsSection() {
               key={index}
               className="group relative flex flex-col items-center"
             >
-              <div className="w-48 aspect-square relative mb-4 overflow-hidden">
-                <Image
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  fill
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <span className="text-white font-semibold">{sponsor.name}</span>
+              <Link
+                href={sponsor.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer transition-transform hover:scale-105"
+                title={`Visit ${sponsor.name}'s website`}
+              >
+                <div className="w-48 aspect-square relative mb-4 overflow-hidden">
+                  <Image
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    fill
+                    className="object-contain p-6 transition-transform duration-300"
+                  />
+                </div>
+                <span className="text-white font-semibold text-center block">
+                  {sponsor.name}
+                </span>
+              </Link>
             </div>
           ))}
         </div>

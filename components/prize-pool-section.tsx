@@ -6,7 +6,7 @@ export default function PrizePoolSection() {
       level: "Gold",
       icon: <Trophy className="h-16 w-16 text-yellow-500" />,
       title: "Winner",
-      amount: "₹12,000 cash",
+      amount: "₹12,000",
       extras: "Exclusive Swag Kit",
       borderColor: "border-yellow-500",
       bgColor: "bg-yellow-500/10",
@@ -17,7 +17,7 @@ export default function PrizePoolSection() {
       level: "Silver",
       icon: <Medal className="h-16 w-16 text-gray-300" />,
       title: "1st Runner-up",
-      amount: "₹8,000 cash",
+      amount: "₹8,000",
       extras: "Exclusive Swag Kit",
       borderColor: "border-gray-300",
       bgColor: "bg-gray-300/10",
@@ -28,7 +28,7 @@ export default function PrizePoolSection() {
       level: "Bronze",
       icon: <Medal className="h-16 w-16 text-amber-600" />,
       title: "2nd Runner-up",
-      amount: "₹5,000 cash",
+      amount: "₹5,000",
       extras: "Exclusive Swag Kit",
       borderColor: "border-amber-600",
       bgColor: "bg-amber-600/10",
@@ -54,11 +54,11 @@ export default function PrizePoolSection() {
             </span>
           </h2>
           <p className="text-4xl md:text-5xl font-bold text-gray-200 mb-16">
-            ₹1,000,000+
+            ₹300,000+
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid hidden grid-cols-1 md:grid-cols-3 gap-8">
           {prizes.map((prize, index) => (
             <div
               key={index}
@@ -81,7 +81,7 @@ export default function PrizePoolSection() {
                 {prize.title}
               </h3>
               <p className={`text-3xl font-extrabold ${prize.textColor} mb-2`}>
-                {prize.amount} +
+                {prize.amount}
               </p>
               <p className={`text-xl font-bold ${prize.textColor}`}>
                 {prize.extras}

@@ -7,6 +7,7 @@ import SponsorsSection from "@/components/sponsors-section";
 import ParticipationSection from "@/components/participation-section";
 import PrizePoolSection from "@/components/prize-pool-section";
 import Footer from "@/components/footer";
+// import RegistrationSection from "@/components/registration-section";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/* Participation Section */}
       <ParticipationSection />
+
+      {/* Registration Section (Uncomment when ready to activate) */}
+      {/* <RegistrationSection /> */}
 
       {/* Footer */}
       <Footer />
