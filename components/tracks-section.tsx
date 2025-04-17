@@ -61,11 +61,9 @@ export default function TracksSection() {
             <div className="w-12 h-12 rounded-full bg-pink-500/10 flex items-center justify-center mb-4">
               <Brain className="h-6 w-6 text-pink-500" />
             </div>
-            <h4 className="text-xl font-bold mb-3 text-white">
-              AI & Machine Learning
-            </h4>
+            <h4 className="text-xl font-bold mb-3 text-white">Health tech</h4>
             <p className="text-gray-300">
-              Build smarter, data-driven applications.
+              Build applications for people's health.
             </p>
           </div>
 
@@ -74,10 +72,10 @@ export default function TracksSection() {
               <Link className="h-6 w-6 text-pink-500" />
             </div>
             <h4 className="text-xl font-bold mb-3 text-white">
-              Blockchain & Web3
+              Cyber security
             </h4>
             <p className="text-gray-300">
-              Work on decentralized solutions for the future.
+              Work on secure networks for the future.
             </p>
           </div>
 

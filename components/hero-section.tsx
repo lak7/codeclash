@@ -33,7 +33,7 @@ const CountdownTimer = () => {
 
   // Target date - April 26, 2025
   const targetDate = useMemo(
-    () => new Date("April 26, 2025 00:00:00").getTime(),
+    () => new Date("May 3, 2025 00:00:00").getTime(),
     []
   );
 
@@ -386,7 +386,7 @@ export default function HeroSection() {
             {
               icon: <Calendar className="h-5 w-5" />,
               title: "Dates",
-              content: "April 26-27, 2025",
+              content: "May 3-4, 2025",
               symbol: (
                 <Triangle
                   className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"

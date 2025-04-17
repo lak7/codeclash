@@ -58,7 +58,7 @@ export default function PrizePoolSection() {
           </p>
         </div>
 
-        <div className="grid hidden grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {prizes.map((prize, index) => (
             <div
               key={index}
@@ -81,7 +81,7 @@ export default function PrizePoolSection() {
                 {prize.title}
               </h3>
               <p className={`text-3xl font-extrabold ${prize.textColor} mb-2`}>
-                {prize.amount}
+                {/* {prize.amount} */}
               </p>
               <p className={`text-xl font-bold ${prize.textColor}`}>
                 {prize.extras}

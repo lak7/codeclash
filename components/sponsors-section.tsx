@@ -9,11 +9,16 @@ export default function SponsorsSection() {
       logo: "/codecraft.png",
       website: "https://codecrafters.io",
     },
-    // {
-    //   name: "Geek Room",
-    //   logo: "/geek.png",
-    //   website: "https://geekroom.dev",
-    // },
+    {
+      name: "Powergrid",
+      logo: "/powergrid.png",
+      website: "https://www.powergrid.in/",
+    },
+    {
+      name: "All Trip",
+      logo: "/alltrip.png",
+      website: "https://alltripp-travel.vercel.app/",
+    },
   ];
 
   return (
@@ -78,12 +83,18 @@ export default function SponsorsSection() {
         </div>
 
         <div className="mt-28 text-center">
-          <div className="inline-flex items-center gap-2 bg-pink-500/10 px-4 py-2 rounded-full border border-pink-500/20 hover:bg-pink-500/20 transition-colors">
-            <CircleDollarSign className="h-5 w-5 text-pink-500" />
-            <span className="text-gray-300">
-              Interested in sponsoring? Contact us!
-            </span>
-          </div>
+          <Link
+            href="https://www.instagram.com/codeclash2.0?igsh=aHltNWs0dTY0bDlv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="inline-flex items-center gap-2 bg-pink-500/10 px-4 py-2 rounded-full border border-pink-500/20 hover:bg-pink-500/20 transition-colors">
+              <CircleDollarSign className="h-5 w-5 text-pink-500" />
+              <span className="text-gray-300">
+                Interested in sponsoring? Contact us!
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
