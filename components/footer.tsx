@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-5 pt-3">
               <Link
-                href="https://twitter.com/codeclash"
+                href="https://x.com/codeclash2_0?s=11"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-400 transition-colors duration-200"
@@ -33,7 +33,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link
-                href="https://instagram.com/codeclash"
+                href="https://www.instagram.com/codeclash2.0?igsh=aHltNWs0dTY0bDlv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-400 transition-colors duration-200"
@@ -41,7 +41,7 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
-                href="https://linkedin.com/company/codeclash"
+                href="https://www.linkedin.com/company/codeclash2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-400 transition-colors duration-200"
@@ -49,7 +49,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://github.com/codeclash"
+                href="https://github.com/lak7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-400 transition-colors duration-200"
@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start group">
                 <MapPin className="h-5 w-5 mr-3 text-pink-500 mt-1" />
-                <span className="text-gray-300">Paschim Vihar, Delhi</span>
+                <span className="text-gray-300">Delhi</span>
               </li>
             </ul>
           </div>
