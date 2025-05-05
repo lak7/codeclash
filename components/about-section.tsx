@@ -51,7 +51,7 @@ export default function AboutSection() {
                   <Calendar className="h-4 w-4" />
                   <span>Dates</span>
                 </div>
-                <div className="text-white">May 3-4, 2025</div>
+                <div className="text-white">June 28-29, 2025</div>
               </div>
 
               <div className="bg-black/60 backdrop-blur-sm border border-pink-500/20 rounded-md p-4 hover:border-pink-500/40 transition-all">
