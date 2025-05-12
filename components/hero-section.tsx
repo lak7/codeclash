@@ -353,6 +353,9 @@ export default function HeroSection() {
 
           <Button
             size="lg"
+            onClick={() =>
+              window.open("https://forms.gle/uuQvzdpcdLkLNgju7", "_blank")
+            }
             className="bg-pink-500 hover:bg-pink-600 text-white border-none px-10 py-7 text-lg rounded-md relative group overflow-hidden"
           >
             <span className="relative z-10">Register Now</span>
@@ -376,7 +379,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl"
           style={{ y: cardsY }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -397,7 +400,7 @@ export default function HeroSection() {
             {
               icon: <MapPin className="h-5 w-5" />,
               title: "Venue",
-              content: "To be announced",
+              content: "Google Office, Gurgaon",
               symbol: (
                 <Circle
                   className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"

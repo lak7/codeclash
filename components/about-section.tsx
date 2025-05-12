@@ -59,7 +59,7 @@ export default function AboutSection() {
                   <MapPin className="h-4 w-4" />
                   <span>Venue</span>
                 </div>
-                <div className="text-white">To be announced</div>
+                <div className="text-white">Google Office, Gurgaon</div>
               </div>
 
               <div className="bg-black/60 backdrop-blur-sm border border-pink-500/20 rounded-md p-4 hover:border-pink-500/40 transition-all">
