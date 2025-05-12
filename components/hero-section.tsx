@@ -352,13 +352,13 @@ export default function HeroSection() {
             <Circle className="h-6 w-6 text-pink-500/80" strokeWidth={2} />
           </div>
 
-          <div className="flex justify-center items-center gap-10">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10">
             <Button
               size="lg"
               onClick={() =>
                 window.open("https://forms.gle/uuQvzdpcdLkLNgju7", "_blank")
               }
-              className="bg-pink-500 hover:bg-pink-600 text-white border-none px-10 py-7 text-lg rounded-md relative group overflow-hidden"
+              className="bg-pink-500 hover:bg-pink-600 text-white border-none px-6 sm:px-10 py-6 sm:py-7 text-base sm:text-lg rounded-md relative group overflow-hidden w-full sm:w-auto"
             >
               <span className="relative z-10">Register Now</span>
               <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -386,7 +386,7 @@ export default function HeroSection() {
                   "_blank"
                 )
               }
-              className="bg-black hover:bg-pink-600 text-white border border-pink-500 px-10 py-7 text-lg rounded-md relative group overflow-hidden"
+              className="bg-black hover:bg-pink-600 text-white border border-pink-500 px-6 sm:px-10 py-6 sm:py-7 text-base sm:text-lg rounded-md relative group overflow-hidden w-full sm:w-auto"
             >
               <span className="relative z-10">Code of Conduct</span>
               <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
