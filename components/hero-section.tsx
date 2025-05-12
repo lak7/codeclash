@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
+import Link from "next/link";
 
 // Countdown timer component
 const CountdownTimer = () => {
@@ -351,31 +352,61 @@ export default function HeroSection() {
             <Circle className="h-6 w-6 text-pink-500/80" strokeWidth={2} />
           </div>
 
-          <Button
-            size="lg"
-            onClick={() =>
-              window.open("https://forms.gle/uuQvzdpcdLkLNgju7", "_blank")
-            }
-            className="bg-pink-500 hover:bg-pink-600 text-white border-none px-10 py-7 text-lg rounded-md relative group overflow-hidden"
-          >
-            <span className="relative z-10">Register Now</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span className="absolute -inset-px bg-gradient-to-r from-pink-400 to-pink-600 opacity-50 group-hover:opacity-90 blur-md transition-opacity duration-300 -z-10"></span>
+          <div className="flex justify-center items-center gap-10">
+            <Button
+              size="lg"
+              onClick={() =>
+                window.open("https://forms.gle/uuQvzdpcdLkLNgju7", "_blank")
+              }
+              className="bg-pink-500 hover:bg-pink-600 text-white border-none px-10 py-7 text-lg rounded-md relative group overflow-hidden"
+            >
+              <span className="relative z-10">Register Now</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="absolute -inset-px bg-gradient-to-r from-pink-400 to-pink-600 opacity-50 group-hover:opacity-90 blur-md transition-opacity duration-300 -z-10"></span>
 
-            {/* Added pulsing effect */}
-            <motion.span
-              className="absolute inset-0 bg-pink-400/20 rounded-md"
-              animate={{
-                scale: [1, 1.05, 1],
-                opacity: [0, 0.5, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          </Button>
+              {/* Added pulsing effect */}
+              <motion.span
+                className="absolute inset-0 bg-pink-400/20 rounded-md"
+                animate={{
+                  scale: [1, 1.05, 1],
+                  opacity: [0, 0.5, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </Button>
+            <Button
+              size="lg"
+              onClick={() =>
+                window.open(
+                  "https://www.codeclash.in/code-of-conduct",
+                  "_blank"
+                )
+              }
+              className="bg-black hover:bg-pink-600 text-white border border-pink-500 px-10 py-7 text-lg rounded-md relative group overflow-hidden"
+            >
+              <span className="relative z-10">Code of Conduct</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="absolute -inset-px bg-gradient-to-r from-pink-400 to-pink-600 opacity-50 group-hover:opacity-90 blur-md transition-opacity duration-300 -z-10"></span>
+
+              {/* Added pulsing effect */}
+              <motion.span
+                className="absolute inset-0 bg-pink-400/20 rounded-md"
+                animate={{
+                  scale: [1, 1.05, 1],
+                  opacity: [0, 0.5, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </Button>
+          </div>
         </motion.div>
 
         <motion.div

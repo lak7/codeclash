@@ -139,6 +139,15 @@ export default function Footer() {
                   Participation
                 </a>
               </li>
+              <li>
+                <Link
+                  href="/code-of-conduct"
+                  className="hover:text-pink-400 transition-colors duration-200 flex items-center"
+                >
+                  <span className="h-1 w-1 bg-pink-500 rounded-full mr-2"></span>
+                  Code of Conduct
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
