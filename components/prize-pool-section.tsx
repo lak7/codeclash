@@ -7,7 +7,8 @@ export default function PrizePoolSection() {
       icon: <Trophy className="h-16 w-16 text-yellow-500" />,
       title: "Winner",
       amount: "₹12,000",
-      extras: "Exclusive Swag Kit",
+      extras:
+        "Cash Prize + Goodies + Swags + Certificate of Excellence + Internship Opportunity",
       borderColor: "border-yellow-500",
       bgColor: "bg-yellow-500/10",
       textColor: "text-yellow-500",
@@ -18,7 +19,7 @@ export default function PrizePoolSection() {
       icon: <Medal className="h-16 w-16 text-gray-300" />,
       title: "1st Runner-up",
       amount: "₹8,000",
-      extras: "Exclusive Swag Kit",
+      extras: "Cash Prize + Goodies + Swags + Certificate of Excellence",
       borderColor: "border-gray-300",
       bgColor: "bg-gray-300/10",
       textColor: "text-gray-300",
@@ -29,7 +30,7 @@ export default function PrizePoolSection() {
       icon: <Medal className="h-16 w-16 text-amber-600" />,
       title: "2nd Runner-up",
       amount: "₹5,000",
-      extras: "Exclusive Swag Kit",
+      extras: "Cash Prize + Goodies + Certificate of Excellence",
       borderColor: "border-amber-600",
       bgColor: "bg-amber-600/10",
       textColor: "text-amber-600",
@@ -81,13 +82,34 @@ export default function PrizePoolSection() {
                 {prize.title}
               </h3>
               <p className={`text-3xl font-extrabold ${prize.textColor} mb-2`}>
-                {/* {prize.amount} */}
+                {prize.amount}
               </p>
-              <p className={`text-xl font-bold ${prize.textColor}`}>
+              <p
+                className={`text-sm font-medium text-gray-300 mt-1 max-w-[250px]`}
+              >
                 {prize.extras}
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 bg-gray-900/50 border border-pink-500/20 rounded-xl p-8 max-w-3xl mx-auto">
+          <h3 className="text-xl font-bold text-white mb-4">
+            Additional Benefits:
+          </h3>
+          <ul className="space-y-2 text-gray-300">
+            <li className="flex items-start">
+              <span className="text-pink-500 mr-2">•</span>
+              <span>All participants will receive certificates.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-pink-500 mr-2">•</span>
+              <span>
+                Top teams may also be considered for special internship
+                opportunities.
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
