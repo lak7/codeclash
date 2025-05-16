@@ -20,7 +20,7 @@ export default function CodeOfConduct() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
       {/* Header */}
-      <div className="relative w-full py-24 bg-gradient-to-b from-pink-500/20 to-transparent overflow-hidden">
+      <div className="relative w-full py-5 bg-gradient-to-b from-pink-500/20 to-transparent overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(221,31,122,0.25)_0%,rgba(0,0,0,0)_60%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(221,31,122,0.25)_0%,rgba(0,0,0,0)_60%)]"></div>
 
