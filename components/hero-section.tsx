@@ -420,7 +420,7 @@ export default function HeroSection() {
             {
               icon: <Calendar className="h-5 w-5" />,
               title: "Dates",
-              content: "June 28-29, 2025",
+              content: "June 28, 2025",
               symbol: (
                 <Triangle
                   className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
