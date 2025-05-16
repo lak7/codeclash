@@ -172,422 +172,6 @@ export default function CodeOfConduct() {
                 </div>
               </div>
             </section>
-
-            {/* Timeline and Round Details */}
-            <section className="group bg-zinc-900/50 border border-pink-900/40 hover:border-pink-700/50 rounded-xl p-8 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-pink-900/10">
-              <div className="flex items-start">
-                <div className="mr-6 mt-1">
-                  <div className="p-3 bg-pink-500/10 rounded-lg group-hover:bg-pink-500/20 transition-colors duration-300">
-                    <Clock className="h-6 w-6 text-pink-400 group-hover:text-pink-300 transition-colors duration-300" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    Timeline and Round Details
-                  </h3>
-
-                  <div className="space-y-10">
-                    {/* Round 1 */}
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
-                          1
-                        </div>
-                        <h4 className="text-xl font-semibold text-pink-400">
-                          Online Round: Ideation & Conceptualization
-                        </h4>
-                      </div>
-
-                      <div className="ml-11 space-y-6">
-                        <div>
-                          <p className="text-lg text-gray-300 mb-3">
-                            <span className="font-semibold text-white">
-                              Date:
-                            </span>{" "}
-                            June 25, 2025
-                          </p>
-                          <p className="text-lg text-gray-300 mb-3">
-                            <span className="font-semibold text-white">
-                              Mode:
-                            </span>{" "}
-                            Online
-                          </p>
-                          <p className="text-lg text-gray-300 mb-3">
-                            <span className="font-semibold text-white">
-                              Objective:
-                            </span>{" "}
-                            Pitch an innovative solution addressing a real-world
-                            challenge
-                          </p>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-white mb-3">
-                            Schedule
-                          </h5>
-                          <ul className="text-gray-300 space-y-2">
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Opening Ceremony: 9:00 AM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>R1 Begins: 9:30 AM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>R1 Judging: 12:00 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>R1 Elimination Announcement: 2:30 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Break: 3:00 PM - 3:30 PM</span>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-white mb-3">
-                            Rules
-                          </h5>
-                          <div className="space-y-4">
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                1. Submission Requirements:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Team intro with defined roles</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>PPT with brief idea</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Optional pitch video (2 minutes)</span>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                2. Evaluation Criteria:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Originality</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Relevance and feasibility</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Clarity and presentation quality</span>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                3. Reporting:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>
-                                    Team representatives must log in to the
-                                    platform by 8:30 AM for verification
-                                  </span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>
-                                    Attendance will be recorded before the
-                                    Opening Ceremony
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                4. Integrity Clause:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>
-                                    All ideas must be original. Any plagiarism
-                                    will lead to disqualification
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Round 2 */}
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
-                          2
-                        </div>
-                        <h4 className="text-xl font-semibold text-pink-400">
-                          Online Round: Development & Prototyping
-                        </h4>
-                      </div>
-
-                      <div className="ml-11 space-y-6">
-                        <div>
-                          <p className="text-lg text-gray-300 mb-3">
-                            <span className="font-semibold text-white">
-                              Objective:
-                            </span>{" "}
-                            Develop a working MVP of the shortlisted idea
-                          </p>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-white mb-3">
-                            Schedule
-                          </h5>
-                          <ul className="text-gray-300 space-y-2">
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Round 2 Begins: 3:30 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>R2 Judging: 7:30 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>R2 Elimination Announcement: 11:00 PM</span>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-white mb-3">
-                            Rules
-                          </h5>
-                          <div className="space-y-4">
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                1. Allowed Tools:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>
-                                    Any programming language, APIs, and
-                                    open-source libraries
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                2. Code of Conduct:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>
-                                    Respectful, inclusive, and ethical behavior
-                                    is mandatory
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Round 3 */}
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
-                          3
-                        </div>
-                        <h4 className="text-xl font-semibold text-pink-400">
-                          Final Presentation & Judging
-                        </h4>
-                      </div>
-
-                      <div className="ml-11 space-y-6">
-                        <div>
-                          <p className="text-lg text-gray-300 mb-3">
-                            <span className="font-semibold text-white">
-                              Date:
-                            </span>{" "}
-                            June 28, 2025
-                          </p>
-                          <p className="text-lg text-gray-300 mb-3">
-                            <span className="font-semibold text-white">
-                              Venue:
-                            </span>{" "}
-                            Google Office, Gurgaon
-                          </p>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-white mb-3">
-                            Schedule
-                          </h5>
-                          <ul className="text-gray-300 space-y-2">
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Opening Ceremony: 9:00 AM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Judging Session: 10:30 AM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Lunch Break: 1:30-2:15 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Judging Session: 2:30 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Results Announcement: 3:30 PM</span>
-                            </li>
-                            <li className="flex items-start text-lg">
-                              <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                              <span>Closing Ceremony: 4:00 PM</span>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-white mb-3">
-                            Presentation Guidelines
-                          </h5>
-                          <div className="space-y-4">
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                1. Pitch Format:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>5 min pitch + 2 min Q&A</span>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                2. Content Required:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Problem Statement</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Solution Architecture</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Tech Stack</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Implementation</span>
-                                </li>
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>Future Scope</span>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div>
-                              <p className="text-lg text-white mb-2">
-                                3. Demo:
-                              </p>
-                              <ul className="text-gray-300 space-y-2 ml-6">
-                                <li className="flex items-start text-lg">
-                                  <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                                  <span>
-                                    Live demo preferred. Recorded walkthroughs
-                                    allowed if tech issues arise
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Additional Guidelines */}
-            <section className="group bg-zinc-900/50 border border-pink-900/40 hover:border-pink-700/50 rounded-xl p-8 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-pink-900/10">
-              <div className="flex items-start">
-                <div className="mr-6 mt-1">
-                  <div className="p-3 bg-pink-500/10 rounded-lg group-hover:bg-pink-500/20 transition-colors duration-300">
-                    <CheckCircle2 className="h-6 w-6 text-pink-400 group-hover:text-pink-300 transition-colors duration-300" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    Additional Guidelines
-                  </h3>
-
-                  <ul className="text-gray-300 space-y-4">
-                    <li className="flex items-start">
-                      <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                      <span className="text-lg">
-                        <span className="font-semibold text-white">
-                          Team Changes:
-                        </span>{" "}
-                        Not permitted after registration closure
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                      <span className="text-lg">
-                        <span className="font-semibold text-white">
-                          Communication:
-                        </span>{" "}
-                        All updates will be shared via registered emails, groups
-                        and the Code Clash portal
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                      <span className="text-lg">
-                        <span className="font-semibold text-white">
-                          Dress Code (Offline):
-                        </span>{" "}
-                        Smart casuals or team-branded attire encouraged
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
           </div>
 
           {/* Sidebar */}
@@ -664,6 +248,424 @@ export default function CodeOfConduct() {
               </div>
             </section>
           </div>
+        </div>
+
+        {/* Timeline and Round Details - Full Width */}
+        <div className="mt-12">
+          <section className="group bg-zinc-900/50 border border-pink-900/40 hover:border-pink-700/50 rounded-xl p-8 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-pink-900/10">
+            <div className="flex items-start">
+              <div className="mr-6 mt-1">
+                <div className="p-3 bg-pink-500/10 rounded-lg group-hover:bg-pink-500/20 transition-colors duration-300">
+                  <Clock className="h-6 w-6 text-pink-400 group-hover:text-pink-300 transition-colors duration-300" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Timeline and Round Details
+                </h3>
+
+                <div className="space-y-10">
+                  {/* Round 1 */}
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
+                        1
+                      </div>
+                      <h4 className="text-xl font-semibold text-pink-400">
+                        Online Round: Ideation & Conceptualization
+                      </h4>
+                    </div>
+
+                    <div className="ml-11 space-y-6">
+                      <div>
+                        <p className="text-lg text-gray-300 mb-3">
+                          <span className="font-semibold text-white">
+                            Date:
+                          </span>{" "}
+                          June 25, 2025
+                        </p>
+                        <p className="text-lg text-gray-300 mb-3">
+                          <span className="font-semibold text-white">
+                            Mode:
+                          </span>{" "}
+                          Online
+                        </p>
+                        <p className="text-lg text-gray-300 mb-3">
+                          <span className="font-semibold text-white">
+                            Objective:
+                          </span>{" "}
+                          Pitch an innovative solution addressing a real-world
+                          challenge
+                        </p>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-semibold text-white mb-3">
+                          Schedule
+                        </h5>
+                        <ul className="text-gray-300 space-y-2">
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Opening Ceremony: 9:00 AM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>R1 Begins: 9:30 AM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>R1 Judging: 12:00 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>R1 Elimination Announcement: 2:30 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Break: 3:00 PM - 3:30 PM</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-semibold text-white mb-3">
+                          Rules
+                        </h5>
+                        <div className="space-y-4">
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              1. Submission Requirements:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Team intro with defined roles</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>PPT with brief idea</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Optional pitch video (2 minutes)</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              2. Evaluation Criteria:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Originality</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Relevance and feasibility</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Clarity and presentation quality</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              3. Reporting:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>
+                                  Team representatives must log in to the
+                                  platform by 8:30 AM for verification
+                                </span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>
+                                  Attendance will be recorded before the Opening
+                                  Ceremony
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              4. Integrity Clause:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>
+                                  All ideas must be original. Any plagiarism
+                                  will lead to disqualification
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Round 2 */}
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
+                        2
+                      </div>
+                      <h4 className="text-xl font-semibold text-pink-400">
+                        Online Round: Development & Prototyping
+                      </h4>
+                    </div>
+
+                    <div className="ml-11 space-y-6">
+                      <div>
+                        <p className="text-lg text-gray-300 mb-3">
+                          <span className="font-semibold text-white">
+                            Objective:
+                          </span>{" "}
+                          Develop a working MVP of the shortlisted idea
+                        </p>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-semibold text-white mb-3">
+                          Schedule
+                        </h5>
+                        <ul className="text-gray-300 space-y-2">
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Round 2 Begins: 3:30 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>R2 Judging: 7:30 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>R2 Elimination Announcement: 11:00 PM</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-semibold text-white mb-3">
+                          Rules
+                        </h5>
+                        <div className="space-y-4">
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              1. Allowed Tools:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>
+                                  Any programming language, APIs, and
+                                  open-source libraries
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              2. Code of Conduct:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>
+                                  Respectful, inclusive, and ethical behavior is
+                                  mandatory
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Round 3 */}
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
+                        3
+                      </div>
+                      <h4 className="text-xl font-semibold text-pink-400">
+                        Final Presentation & Judging
+                      </h4>
+                    </div>
+
+                    <div className="ml-11 space-y-6">
+                      <div>
+                        <p className="text-lg text-gray-300 mb-3">
+                          <span className="font-semibold text-white">
+                            Date:
+                          </span>{" "}
+                          June 28, 2025
+                        </p>
+                        <p className="text-lg text-gray-300 mb-3">
+                          <span className="font-semibold text-white">
+                            Venue:
+                          </span>{" "}
+                          Google Office, Gurgaon
+                        </p>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-semibold text-white mb-3">
+                          Schedule
+                        </h5>
+                        <ul className="text-gray-300 space-y-2">
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Opening Ceremony: 9:00 AM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Judging Session: 10:30 AM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Lunch Break: 1:30-2:15 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Judging Session: 2:30 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Results Announcement: 3:30 PM</span>
+                          </li>
+                          <li className="flex items-start text-lg">
+                            <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                            <span>Closing Ceremony: 4:00 PM</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-semibold text-white mb-3">
+                          Presentation Guidelines
+                        </h5>
+                        <div className="space-y-4">
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              1. Pitch Format:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>5 min pitch + 2 min Q&A</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-lg text-white mb-2">
+                              2. Content Required:
+                            </p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Problem Statement</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Solution Architecture</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Tech Stack</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Implementation</span>
+                              </li>
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>Future Scope</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-lg text-white mb-2">3. Demo:</p>
+                            <ul className="text-gray-300 space-y-2 ml-6">
+                              <li className="flex items-start text-lg">
+                                <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                                <span>
+                                  Live demo preferred. Recorded walkthroughs
+                                  allowed if tech issues arise
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Additional Guidelines - Full Width */}
+        <div className="mt-12">
+          <section className="group bg-zinc-900/50 border border-pink-900/40 hover:border-pink-700/50 rounded-xl p-8 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-pink-900/10">
+            <div className="flex items-start">
+              <div className="mr-6 mt-1">
+                <div className="p-3 bg-pink-500/10 rounded-lg group-hover:bg-pink-500/20 transition-colors duration-300">
+                  <CheckCircle2 className="h-6 w-6 text-pink-400 group-hover:text-pink-300 transition-colors duration-300" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Additional Guidelines
+                </h3>
+
+                <ul className="text-gray-300 space-y-4">
+                  <li className="flex items-start">
+                    <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                    <span className="text-lg">
+                      <span className="font-semibold text-white">
+                        Team Changes:
+                      </span>{" "}
+                      Not permitted after registration closure
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                    <span className="text-lg">
+                      <span className="font-semibold text-white">
+                        Communication:
+                      </span>{" "}
+                      All updates will be shared via registered emails, groups
+                      and the Code Clash portal
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
+                    <span className="text-lg">
+                      <span className="font-semibold text-white">
+                        Dress Code (Offline):
+                      </span>{" "}
+                      Smart casuals or team-branded attire encouraged
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
