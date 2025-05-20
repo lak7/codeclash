@@ -7,6 +7,7 @@ import SponsorsSection from "@/components/sponsors-section";
 import ParticipationSection from "@/components/participation-section";
 import PrizePoolSection from "@/components/prize-pool-section";
 import Footer from "@/components/footer";
+import TeamGrid from "@/components/team-grid";
 // import RegistrationSection from "@/components/registration-section";
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* Sponsors Section */}
       <SponsorsSection />
+
+      {/* Team Section */}
+      <TeamGrid />
 
       {/* Expectations Section */}
       <ExpectationsSection />
