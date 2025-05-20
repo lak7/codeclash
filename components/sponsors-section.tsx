@@ -19,6 +19,16 @@ export default function SponsorsSection() {
       logo: "/alltrip.png",
       website: "https://alltripp-travel.vercel.app/",
     },
+    {
+      name: "Red Bull",
+      logo: "/redbull.png",
+      website: "https://www.redbull.com/in-en",
+    },
+    {
+      name: "GitHub",
+      logo: "/github.png",
+      website: "https://github.com/",
+    },
   ];
 
   return (
