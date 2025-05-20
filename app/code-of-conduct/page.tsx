@@ -199,9 +199,7 @@ export default function CodeOfConduct() {
                   </li>
                   <li className="flex items-start">
                     <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
-                    <span className="text-lg">
-                      Expulsion from the event (in-person or online)
-                    </span>
+                    <span className="text-lg">Expulsion from the event</span>
                   </li>
                   <li className="flex items-start">
                     <span className="h-2 w-2 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full mr-3 mt-2.5"></span>
@@ -224,11 +222,11 @@ export default function CodeOfConduct() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6 text-lg">
                   Contact organizers at the help desk or designated contact
-                  point (Available on Whatsapp Group).
+                  point.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Mail className="h-5 w-5 text-pink-500 mr-3 mt-1.5" />
+                    <Mail className="h-5 w-5 text-pink-500 mr-0 mt-1.5" />
                     <div className="flex flex-col space-y-4">
                       <a
                         href="mailto:shivanshdas@gmail.com"
