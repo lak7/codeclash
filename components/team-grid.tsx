@@ -27,7 +27,7 @@ export default function TeamGrid() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-center mb-1 tracking-tight"
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-pink-600">
               MEET OUR TEAM
             </span>
           </motion.h1>
@@ -37,7 +37,7 @@ export default function TeamGrid() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ staggerChildren: 0.1 }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
           >
             {regularMembers.map((member, index) => (
               <motion.div
@@ -45,50 +45,44 @@ export default function TeamGrid() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="relative group w-40 h-40 md:w-56 md:h-56 mx-auto"
+                className="group relative bg-gradient-to-b from-gray-900/50 to-black/80 rounded-2xl p-6 border border-gray-800/50 hover:border-pink-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10"
               >
-                <div className="relative w-full h-full">
-                  {/* Glow effect */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl opacity-0 group-hover:opacity-50 blur transition duration-1000 group-hover:duration-200" />
-
-                  {/* Square container */}
-                  <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 transition-all duration-300 group-hover:border-white/20">
-                    <div
-                      className="w-full h-full cursor-pointer"
+                {/* Photo */}
+                <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full opacity-0 group-hover:opacity-75 blur transition duration-300" />
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-pink-500/50 transition-all duration-300">
+                    <Image
+                      src={member.imageUrl || "/placeholder.svg"}
+                      alt={member.name}
+                      fill
+                      className="object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
                       onClick={() => setSelectedMember(member)}
-                    >
-                      <Image
-                        src={member.imageUrl || "/placeholder.svg"}
-                        alt={member.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-
-                    {/* Always visible info overlay with semi-transparent background */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/70">
-                      <div className="text-center">
-                        <p className="text-white/90 font-bold text-sm md:text-base mb-0.5">
-                          {member.name}
-                        </p>
-                        <p className="text-blue-300/90 text-xs md:text-sm">
-                          {member.role}
-                        </p>
-                        {member.linkedinUrl && (
-                          <div className="mt-1.5 flex justify-center">
-                            <a
-                              href={member.linkedinUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-white/80 hover:text-blue-400 transition-colors p-1 rounded-full hover:bg-white/20"
-                            >
-                              <Linkedin size={16} />
-                            </a>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                    />
                   </div>
+                </div>
+
+                {/* Info */}
+                <div className="text-center space-y-3">
+                  <h3 className="text-white font-semibold text-lg group-hover:text-pink-300 transition-colors duration-300">
+                    {member.name}
+                  </h3>
+
+                  <p className="text-gray-400 text-sm">{member.role}</p>
+
+                  {/* LinkedIn Button */}
+                  {member.linkedinUrl && (
+                    <div className="pt-2">
+                      <a
+                        href={member.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-pink-500/20 hover:bg-pink-500 text-pink-300 hover:text-white text-sm rounded-full border border-pink-500/30 hover:border-pink-500 transition-all duration-300 hover:scale-105"
+                      >
+                        <Linkedin size={16} />
+                        <span>Connect</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -113,7 +107,7 @@ export default function TeamGrid() {
                 </DialogHeader>
                 <div className="grid gap-6 py-6">
                   <div className="relative">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl opacity-30 blur" />
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-3xl opacity-30 blur" />
                     <div className="relative w-48 h-48 mx-auto rounded-3xl overflow-hidden border border-white/10">
                       <Image
                         src={selectedMember.imageUrl || "/placeholder.svg"}
@@ -125,7 +119,7 @@ export default function TeamGrid() {
                   </div>
                   <div className="text-center px-4">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                      <h2 className="text-xl font-semibold text-blue-300/90">
+                      <h2 className="text-xl font-semibold text-pink-300/90">
                         {selectedMember.role}
                       </h2>
                       {selectedMember.linkedinUrl && (
@@ -133,7 +127,7 @@ export default function TeamGrid() {
                           href={selectedMember.linkedinUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white/80 hover:text-blue-400 transition-colors p-1 rounded-full hover:bg-white/10"
+                          className="text-white/80 hover:text-pink-400 transition-colors p-1 rounded-full hover:bg-pink-500/20"
                         >
                           <Linkedin size={20} />
                         </a>

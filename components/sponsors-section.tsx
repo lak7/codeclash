@@ -64,32 +64,20 @@ export default function SponsorsSection() {
         </div>
 
         <div className="flex justify-center flex-wrap gap-8">
-          {sponsors.map((sponsor, index) => (
-            <div
-              key={index}
-              className="group relative flex flex-col items-center"
-            >
-              <Link
-                href={sponsor.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cursor-pointer transition-transform hover:scale-105"
-                title={`Visit ${sponsor.name}'s website`}
-              >
-                <div className="w-48 aspect-square relative mb-4 overflow-hidden">
-                  <Image
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    fill
-                    className="object-contain p-6 transition-transform duration-300"
-                  />
-                </div>
-                <span className="text-white font-semibold text-center block">
-                  {sponsor.name}
-                </span>
-              </Link>
-            </div>
-          ))}
+          {/* Revealing Soon with glowing effect */}
+          <div className="flex justify-center items-center min-h-[200px]">
+            <h3 className="text-4xl md:text-6xl font-bold text-white relative">
+              <span className="relative z-10 drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]">
+                REVEALING SOON
+              </span>
+              <span className="absolute inset-0 text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.6)] filter blur-[2px]">
+                REVEALING SOON
+              </span>
+              <span className="absolute inset-0 text-white drop-shadow-[0_0_60px_rgba(255,255,255,0.4)] filter blur-[3px]">
+                REVEALING SOON
+              </span>
+            </h3>
+          </div>
         </div>
 
         <div className="mt-28 text-center">
