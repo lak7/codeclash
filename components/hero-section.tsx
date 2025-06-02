@@ -18,6 +18,7 @@ import {
   Square,
   Circle,
   ChevronDown,
+  MessageCircle,
 } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
@@ -325,11 +326,21 @@ export default function HeroSection() {
           transition={{ delay: 0.3, duration: 0.8 }}
         >
           The Ultimate 24-Hour Hackathon
+          <br />
+          <a
+            href="https://chat.whatsapp.com/HuYOZesGsgT96it0pR6r0O"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-base text-green-400 hover:text-green-300 transition-all duration-300 mt-3 px-4 py-2 rounded-full bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 hover:border-green-400/50 group"
+          >
+            <MessageCircle className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+            <span className="font-medium">Join WhatsApp Community</span>
+          </a>
         </motion.p>
 
         {/* Countdown Timer */}
         <motion.div
-          className="mb-10"
+          className="mb-1"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -338,7 +349,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="mb-16 relative"
+          className="mb-10 relative"
           style={{ y: buttonY }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
