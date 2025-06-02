@@ -67,7 +67,7 @@ export default function SponsorsSection() {
           {/* Revealing Soon with modern styling */}
           <div className="flex justify-center items-center min-h-[200px]">
             <div className="text-center">
-              <h3 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-400 via-white to-pink-400 bg-clip-text text-transparent mb-4 tracking-wider">
+              <h3 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-pink-400 via-white to-pink-400 bg-clip-text text-transparent mb-4 tracking-wider">
                 REVEALING SOON
               </h3>
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto opacity-60"></div>
