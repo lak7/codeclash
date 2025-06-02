@@ -27,11 +27,11 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Kashish Tyagi",
-    role: "Vice-Lead",
-    bio: "Kashish is a true visionary, and she blends creativity with technical acumen, bringing fresh perspectives to innovative projects. As the Vice Lead of DSC, Kashish is eager to collaborate and drive technological advancement.",
-    imageUrl: "/kashish.png",
-    linkedinUrl: "https://www.linkedin.com/in/kashish-tyagi-618354295/",
+    name: "Paanav Puri",
+    role: "Event Management Lead",
+    bio: "As the Event Management Lead for DSC, Paanav excels in planning and executing impactful events that foster learning and collaboration among tech enthusiasts. His dedication to teamwork and meticulous attention to detail ensure the success of every initiative he undertakes, driving the vision of the society forward.",
+    imageUrl: "/paanav.png",
+    linkedinUrl: "https://www.linkedin.com/in/paanav-puri-708003257",
   },
   {
     id: 4,
@@ -44,11 +44,11 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: 6,
-    name: "Paanav Puri",
-    role: "Event Management Lead",
-    bio: "As the Event Management Lead for DSC, Paanav excels in planning and executing impactful events that foster learning and collaboration among tech enthusiasts. His dedication to teamwork and meticulous attention to detail ensure the success of every initiative he undertakes, driving the vision of the society forward.",
-    imageUrl: "/paanav.png",
-    linkedinUrl: "https://www.linkedin.com/in/paanav-puri-708003257",
+    name: "Kashish Tyagi",
+    role: "Vice-Lead",
+    bio: "Kashish is a true visionary, and she blends creativity with technical acumen, bringing fresh perspectives to innovative projects. As the Vice Lead of DSC, Kashish is eager to collaborate and drive technological advancement.",
+    imageUrl: "/kashish.png",
+    linkedinUrl: "https://www.linkedin.com/in/kashish-tyagi-618354295/",
   },
   {
     id: 7,
