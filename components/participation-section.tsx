@@ -87,7 +87,7 @@ export default function ParticipationSection() {
             <Button
               size="lg"
               onClick={() =>
-                window.open("https://unstop.com/o/puDMPh5", "_blank")
+                window.open("https://unstop.com/o/Tpkf7NZ", "_blank")
               }
               className="bg-pink-600 hover:bg-pink-700 text-white border-none px-8 py-6 text-lg rounded-md shadow-glow"
             >
