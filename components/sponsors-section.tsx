@@ -64,19 +64,14 @@ export default function SponsorsSection() {
         </div>
 
         <div className="flex justify-center flex-wrap gap-8">
-          {/* Revealing Soon with glowing effect */}
+          {/* Revealing Soon with modern styling */}
           <div className="flex justify-center items-center min-h-[200px]">
-            <h3 className="text-4xl md:text-6xl font-bold text-white relative">
-              <span className="relative z-10 drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]">
+            <div className="text-center">
+              <h3 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-400 via-white to-pink-400 bg-clip-text text-transparent mb-4 tracking-wider">
                 REVEALING SOON
-              </span>
-              <span className="absolute inset-0 text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.6)] filter blur-[2px]">
-                REVEALING SOON
-              </span>
-              <span className="absolute inset-0 text-white drop-shadow-[0_0_60px_rgba(255,255,255,0.4)] filter blur-[3px]">
-                REVEALING SOON
-              </span>
-            </h3>
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto opacity-60"></div>
+            </div>
           </div>
         </div>
 
