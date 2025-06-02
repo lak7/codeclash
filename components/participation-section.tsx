@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { UserPlus, Code, PresentationIcon } from "lucide-react";
 import Image from "next/image";
@@ -84,6 +86,9 @@ export default function ParticipationSection() {
             </p>
             <Button
               size="lg"
+              onClick={() =>
+                window.open("https://unstop.com/o/puDMPh5", "_blank")
+              }
               className="bg-pink-600 hover:bg-pink-700 text-white border-none px-8 py-6 text-lg rounded-md shadow-glow"
             >
               Register Now

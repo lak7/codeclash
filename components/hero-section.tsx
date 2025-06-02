@@ -356,7 +356,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               onClick={() =>
-                window.open("https://forms.gle/uuQvzdpcdLkLNgju7", "_blank")
+                window.open("https://unstop.com/o/puDMPh5", "_blank")
               }
               className="bg-pink-500 hover:bg-pink-600 text-white border-none px-6 sm:px-10 py-6 sm:py-7 text-base sm:text-lg rounded-md relative group overflow-hidden w-full sm:w-auto"
             >
