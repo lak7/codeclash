@@ -17,7 +17,10 @@ export default function TeamGrid() {
   const regularMembers = teamMembers.filter((member) => !member.featured);
 
   return (
-    <div className="relative bg-black min-h-screen py-16 px-4 overflow-hidden">
+    <div
+      id="team"
+      className="relative bg-black min-h-screen py-16 px-4 overflow-hidden"
+    >
       <div className="absolute inset-0 bg-black/50" />{" "}
       {/* Overlay for readability */}
       <div className="container mx-auto relative z-10">

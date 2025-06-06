@@ -9,11 +9,15 @@ import PrizePoolSection from "@/components/prize-pool-section";
 import Footer from "@/components/footer";
 import TeamGrid from "@/components/team-grid";
 import WhatsAppButton from "@/components/whatsapp-button";
+import Navbar from "@/components/navbar";
 // import RegistrationSection from "@/components/registration-section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-black text-white overflow-hidden">
+    <main className="flex min-h-screen flex-col bg-black text-white overflow-hidden pt-16">
+      {/* Navbar */}
+      <Navbar />
+
       {/* Hero Section */}
       <HeroSection />
 
