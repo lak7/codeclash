@@ -67,7 +67,7 @@ export default function AboutSection() {
                   <Clock className="h-4 w-4" />
                   <span>Duration</span>
                 </div>
-                <div className="text-white">24 Hours of Hacking</div>
+                <div className="text-white">9:00 AM to 4:00 PM</div>
               </div>
 
               <div className="bg-black/60 backdrop-blur-sm border border-pink-500/20 rounded-md p-4 hover:border-pink-500/40 transition-all">

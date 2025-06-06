@@ -325,7 +325,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          The Ultimate 24-Hour Hackathon
+          The Ultimate Clash of Code
           <br />
           <a
             href="https://chat.whatsapp.com/HuYOZesGsgT96it0pR6r0O"
@@ -453,7 +453,7 @@ export default function HeroSection() {
             {
               icon: <Clock className="h-5 w-5" />,
               title: "Duration",
-              content: "24 Hours of Hacking",
+              content: "9:00 AM to 4:00 PM",
               symbol: (
                 <Square
                   className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
