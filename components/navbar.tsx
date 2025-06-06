@@ -26,6 +26,15 @@ export default function Navbar() {
     setIsOpen(false); // Close mobile menu after click
   };
 
+  // Scroll to top function for logo
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsOpen(false); // Close mobile menu if open
+  };
+
   // Track active section and scroll state
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +64,7 @@ export default function Navbar() {
     <>
       {/* Floating Navbar */}
       <nav
-        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-300 w-full max-w-4xl px-4 ${
+        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-300 w-full max-w-5xl px-4 ${
           isScrolled ? "translate-y-0 opacity-100" : "translate-y-0 opacity-95"
         }`}
       >
@@ -69,7 +78,10 @@ export default function Navbar() {
               <div className="flex items-center justify-between">
                 {/* Simplified Logo */}
                 <div className="flex-shrink-0">
-                  <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-300 hover:to-purple-400 transition-all duration-300 cursor-pointer">
+                  <h1
+                    className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-300 hover:to-purple-400 transition-all duration-300 cursor-pointer"
+                    onClick={scrollToTop}
+                  >
                     CodeClash.in
                   </h1>
                 </div>
