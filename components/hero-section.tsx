@@ -169,7 +169,7 @@ export default function HeroSection() {
       </div>
 
       {/* Background layers with enhanced parallax */}
-      <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
+      <motion.div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black">
           {/* Improved dotted pattern overlay */}
           <div
@@ -282,10 +282,10 @@ export default function HeroSection() {
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center py-20">
         <motion.div
           className="mb-4 relative"
-          style={{ y: titleY, scale: titleScale }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          // style={{ y: titleY, scale: titleScale }}
+          // initial={{ opacity: 0, y: 30 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.8 }}
         >
           {/* Decorative symbols around title */}
           <div className="absolute -top-14 -left-14 opacity-70 hidden md:block">
@@ -306,24 +306,24 @@ export default function HeroSection() {
           {/* Added animated glow under the title */}
           <motion.div
             className="w-64 h-1 bg-pink-500/50 rounded-full mx-auto mt-4 blur-[8px]"
-            animate={{
-              width: ["60%", "80%", "60%"],
-              opacity: [0.4, 0.8, 0.4],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+            // animate={{
+            //   width: ["60%", "80%", "60%"],
+            //   opacity: [0.4, 0.8, 0.4],
+            // }}
+            // transition={{
+            //   duration: 4,
+            //   repeat: Infinity,
+            //   ease: "easeInOut",
+            // }}
           />
         </motion.div>
 
         <motion.p
           className="text-xl md:text-2xl font-light mb-6 text-white/80 text-center max-w-xl"
-          style={{ y: subtitleY }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
+          // style={{ y: subtitleY }}
+          // initial={{ opacity: 0, y: 30 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ delay: 0.3, duration: 0.8 }}
         >
           The Ultimate Clash of Code
           <br />
@@ -341,19 +341,19 @@ export default function HeroSection() {
         {/* Countdown Timer */}
         <motion.div
           className="mb-1"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          // initial={{ opacity: 0, y: 30 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ delay: 0.5, duration: 0.8 }}
         >
           <CountdownTimer />
         </motion.div>
 
         <motion.div
           className="mb-10 relative"
-          style={{ y: buttonY }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          // style={{ y: buttonY }}
+          // initial={{ opacity: 0, y: 30 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ delay: 0.6, duration: 0.8 }}
         >
           {/* Symbol decorations around button */}
           <div className="absolute -left-10 top-1/2 transform -translate-y-1/2 opacity-60 hidden lg:block">
@@ -422,10 +422,10 @@ export default function HeroSection() {
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl"
-          style={{ y: cardsY }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
+          // style={{ y: cardsY }}
+          // initial={{ opacity: 0, y: 30 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ delay: 0.7, duration: 0.8 }}
         >
           {[
             {

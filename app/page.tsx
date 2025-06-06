@@ -14,7 +14,7 @@ import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-black text-white overflow-hidden pt-16">
+    <main className="flex min-h-screen flex-col bg-black text-white overflow-hidden">
       {/* Navbar */}
       <Navbar />
 
