@@ -301,6 +301,19 @@ export default function HeroSection() {
           <h1 className="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-pink-500 to-pink-300 text-center leading-none tracking-tight">
             CodeClash 2.0
           </h1>
+
+          {/* Powered by Unstop logo */}
+          <div className="flex items-center justify-center gap-2 text-white/70 text-sm md:text-base mt-4 md:mt-0 md:absolute md:bottom-0 md:right-0 md:justify-start">
+            <span className="font-light">powered by</span>
+            <Image
+              src="/unstop-white.png"
+              alt="Unstop"
+              width={80}
+              height={24}
+              className="min-w-[80px] h-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+
           <div className="h-1 w-40 mx-auto bg-gradient-to-r from-pink-500/0 via-pink-500 to-pink-500/0 mt-4 blur-[6px]"></div>
 
           {/* Added animated glow under the title */}
@@ -418,100 +431,6 @@ export default function HeroSection() {
               />
             </Button>
           </div>
-        </motion.div>
-
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl"
-          // style={{ y: cardsY }}
-          // initial={{ opacity: 0, y: 30 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ delay: 0.7, duration: 0.8 }}
-        >
-          {[
-            {
-              icon: <Calendar className="h-5 w-5" />,
-              title: "Dates",
-              content: "June 28, 2025",
-              symbol: (
-                <Triangle
-                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
-                  strokeWidth={1}
-                />
-              ),
-            },
-            {
-              icon: <MapPin className="h-5 w-5" />,
-              title: "Venue",
-              content: "Google Office, Gurgaon",
-              symbol: (
-                <Circle
-                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
-                  strokeWidth={1}
-                />
-              ),
-            },
-            {
-              icon: <Clock className="h-5 w-5" />,
-              title: "Duration",
-              content: "9:00 AM to 4:00 PM",
-              symbol: (
-                <Square
-                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
-                  strokeWidth={1}
-                />
-              ),
-            },
-            {
-              icon: <Users className="h-5 w-5" />,
-              title: "Participants",
-              content: "Open to All",
-              symbol: (
-                <Triangle
-                  className="h-14 w-14 absolute -top-1 -right-1 text-pink-500/10"
-                  strokeWidth={1}
-                />
-              ),
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-black/30 backdrop-blur-md border border-pink-500/20 rounded-md p-5 hover:border-pink-500/60 transition-all duration-300 group relative overflow-hidden"
-              style={{
-                transform:
-                  mousePosition.x !== 0 && mousePosition.y !== 0
-                    ? `perspective(1000px) rotateY(${
-                        mousePosition.x * 10
-                      }deg) rotateX(${-mousePosition.y * 10}deg)`
-                    : "perspective(1000px)",
-                transformStyle: "preserve-3d",
-              }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-              {/* Added highlight effect */}
-              <div className="absolute -inset-4 bg-pink-500/5 rounded-md blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              {/* Squid Game symbol in each card */}
-              {item.symbol}
-
-              <div className="text-pink-500 font-medium mb-2 text-sm flex items-center gap-2">
-                {item.icon}
-                <span>{item.title}</span>
-              </div>
-              <div className="text-white text-lg">{item.content}</div>
-
-              {/* Added light reflection effect */}
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out -skew-x-12"
-                style={{
-                  transform: "translateX(-100%)",
-                  animation: "shine 3s infinite",
-                }}
-              ></div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
 
