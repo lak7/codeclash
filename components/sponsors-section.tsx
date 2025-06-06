@@ -15,6 +15,11 @@ export default function SponsorsSection() {
       website: "https://www.powergrid.in/",
     },
     {
+      name: "Physics Wallah",
+      logo: "/physics.png",
+      website: "https://www.pw.live/",
+    },
+    {
       name: "All Trip",
       logo: "/alltrip.png",
       website: "https://alltripp-travel.vercel.app/",
@@ -64,15 +69,32 @@ export default function SponsorsSection() {
         </div>
 
         <div className="flex justify-center flex-wrap gap-8">
-          {/* Revealing Soon with modern styling */}
-          <div className="flex justify-center items-center min-h-[200px]">
-            <div className="text-center">
-              <h3 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-pink-400 via-white to-pink-400 bg-clip-text text-transparent mb-4 tracking-wider">
-                REVEALING SOON
-              </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto opacity-60"></div>
+          {sponsors.map((sponsor, index) => (
+            <div
+              key={index}
+              className="group relative flex flex-col items-center"
+            >
+              <Link
+                href={sponsor.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer transition-transform hover:scale-105"
+                title={`Visit ${sponsor.name}'s website`}
+              >
+                <div className="w-48 aspect-square relative mb-4 overflow-hidden">
+                  <Image
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    fill
+                    className="object-contain p-6 transition-transform duration-300"
+                  />
+                </div>
+                <span className="text-white font-semibold text-center block">
+                  {sponsor.name}
+                </span>
+              </Link>
             </div>
-          </div>
+          ))}
         </div>
 
         <div className="mt-28 text-center">
