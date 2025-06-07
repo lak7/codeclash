@@ -67,10 +67,10 @@ export default function Footer() {
               <li className="flex items-center group">
                 <Mail className="h-5 w-5 mr-3 text-pink-500" />
                 <a
-                  href="mailto:lakshaygupta2511@gmail.com"
+                  href="mailto:lakshay@codeclash.in"
                   className="group-hover:text-pink-400 transition-colors duration-200"
                 >
-                  lakshaygupta2511@gmail.com
+                  lakshay@codeclash.in
                 </a>
               </li>
               <li className="flex items-center group">
