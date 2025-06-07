@@ -10,6 +10,7 @@ export default function Navbar() {
   const navItems = [
     { name: "About", href: "#about" },
     { name: "Tracks", href: "#tracks" },
+    { name: "Prize", href: "#prize-pool" },
     { name: "Sponsors", href: "#sponsors" },
     { name: "Team", href: "#team" },
   ];
@@ -41,22 +42,35 @@ export default function Navbar() {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
 
-      const sections = ["about", "tracks", "sponsors", "team"];
-      const scrollPos = scrollPosition + 150;
+      const sections = ["about", "tracks", "prize-pool", "sponsors", "team"];
+      let currentSection = "";
 
+      // Find which section is currently most visible in the viewport
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
-            setActiveSection(`#${section}`);
-            break;
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+
+          // Check if section is in viewport (with some buffer)
+          if (
+            scrollPosition + 200 >= elementTop &&
+            scrollPosition < elementBottom - 100
+          ) {
+            currentSection = `#${section}`;
           }
         }
+      }
+
+      if (currentSection) {
+        setActiveSection(currentSection);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Call once to set initial state
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
