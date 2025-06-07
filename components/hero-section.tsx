@@ -304,7 +304,7 @@ export default function HeroSection() {
 
           {/* Powered by Unstop logo */}
           <div className="flex items-center justify-center gap-2 text-white/70 text-sm md:text-base mt-4 md:mt-0 md:absolute md:bottom-0 md:right-0 md:justify-start">
-            <span className="font-light">powered by</span>
+            <span className="font-light">Powered By</span>
             <Image
               src="/unstop-white.png"
               alt="Unstop"

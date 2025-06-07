@@ -31,7 +31,7 @@ export default function TeamGrid() {
             className="text-5xl font-bold text-center mb-1 tracking-tight"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-pink-600">
-              MEET OUR TEAM
+              MEET OUR CORE
             </span>
           </motion.h1>
 

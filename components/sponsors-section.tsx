@@ -20,7 +20,7 @@ export default function SponsorsSection() {
       website: "https://www.pw.live/",
     },
     {
-      name: "All Trip",
+      name: "AllTripp",
       logo: "/alltrip.png",
       website: "https://alltripp-travel.vercel.app/",
     },
@@ -33,6 +33,16 @@ export default function SponsorsSection() {
       name: "GitHub",
       logo: "/github.png",
       website: "https://github.com/",
+    },
+    {
+      name: "Genesis",
+      logo: "/genesis.png",
+      website: "#",
+    },
+    {
+      name: "Geek Room",
+      logo: "/geek.png",
+      website: "https://www.geekroom.in/",
     },
   ];
 
