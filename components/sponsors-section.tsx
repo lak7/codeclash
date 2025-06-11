@@ -24,11 +24,11 @@ export default function SponsorsSection() {
       logo: "/alltrip.png",
       website: "https://alltripp-travel.vercel.app/",
     },
-    {
-      name: "Red Bull",
-      logo: "/redbull2.png",
-      website: "https://www.redbull.com/in-en",
-    },
+    // {
+    //   name: "Red Bull",
+    //   logo: "/redbull2.png",
+    //   website: "https://www.redbull.com/in-en",
+    // },
     {
       name: "GitHub",
       logo: "/github.png",
@@ -37,12 +37,18 @@ export default function SponsorsSection() {
     {
       name: "Genesis",
       logo: "/genesis.png",
-      website: "#",
+      website:
+        "https://www.instagram.com/zk_genesis?utm_source=qr&igsh=MWR0MjFsMWNpaWQ1dA==",
     },
     {
       name: "Geek Room",
       logo: "/geek.png",
       website: "https://www.geekroom.in/",
+    },
+    {
+      name: "Unstop",
+      logo: "/unstop-white.png",
+      website: "https://unstop.com/",
     },
   ];
 

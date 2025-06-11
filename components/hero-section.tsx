@@ -35,7 +35,7 @@ const CountdownTimer = () => {
 
   // Target date - April 26, 2025
   const targetDate = useMemo(
-    () => new Date("June 28, 2025 00:00:00").getTime(),
+    () => new Date("June 21, 2025 00:00:00").getTime(),
     []
   );
 
