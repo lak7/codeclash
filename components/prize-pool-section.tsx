@@ -36,7 +36,7 @@ export default function PrizePoolSection() {
             <Sparkles className="h-6 w-6 absolute -top-4 -right-6 text-yellow-500 animate-pulse" />
           </h2>
           <p className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-200 via-pink-300 to-pink-200 mb-4">
-            ₹300,000+
+            ₹500,000+
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto"></div>
         </div>
