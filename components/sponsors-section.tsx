@@ -24,11 +24,11 @@ export default function SponsorsSection() {
       logo: "/alltrip.png",
       website: "https://alltripp-travel.vercel.app/",
     },
-    // {
-    //   name: "Red Bull",
-    //   logo: "/redbull2.png",
-    //   website: "https://www.redbull.com/in-en",
-    // },
+    {
+      name: "Red Bull",
+      logo: "/redbull2.png",
+      website: "https://www.redbull.com/in-en",
+    },
     {
       name: "GitHub",
       logo: "/github.png",
@@ -49,6 +49,11 @@ export default function SponsorsSection() {
       name: "Unstop",
       logo: "/unstop-white.png",
       website: "https://unstop.com/",
+    },
+    {
+      name: "Nonilion",
+      logo: "/nonilion.png",
+      website: "https://nonilion.com/",
     },
   ];
 
