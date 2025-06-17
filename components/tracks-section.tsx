@@ -19,33 +19,47 @@ export default function TracksSection() {
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-md animate-border-move"></div>
             <div className="relative bg-black backdrop-blur-sm rounded-md p-6 hover:transform hover:scale-105 transition-all border border-pink-500/20">
-              <div className="w-12 h-12 rounded-full bg-pink-500/10 flex items-center justify-center mb-4">
-                <Trophy className="h-6 w-6 text-pink-500" />
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="text-xl font-bold text-white">Omnidimension</h4>
+                <div className="w-32 h-16 rounded-full bg-pink-500/10 flex items-center justify-center">
+                  <Image
+                    src="/omnidimLogo-bg-new.webp"
+                    alt="Omnidimension"
+                    width={80}
+                    height={80}
+                    className="h-12 w-auto"
+                  />
+                </div>
               </div>
-              <h4 className="text-xl font-bold mb-3 text-white">FinTech Innovation</h4>
               <p className="text-gray-300">
-                Create next-generation financial solutions with blockchain and AI integration.
+                Design the interface, orchestrate agent collaboration, and enable real-time execution of actions like phone calls, bookings, and follow-ups — all triggered by natural language instructions.
               </p>
               <div className="mt-4 text-sm text-pink-400 font-semibold">
-                Sponsored by TechCorp • Prize: $10,000
+                Sponsored by Omnidimension • Prize: ₹20,000
               </div>
             </div>
           </div>
 
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-md animate-border-move" style={{animationDelay: '1.5s'}}></div>
-            <div className="relative bg-black backdrop-blur-sm rounded-md p-6 hover:transform hover:scale-105 transition-all border border-pink-500/20">
-              <div className="w-12 h-12 rounded-full bg-pink-500/10 flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-pink-500" />
+            <div className="relative bg-black backdrop-blur-sm rounded-md p-6 hover:transform hover:scale-105 transition-all border border-pink-500/20 pb-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="text-xl font-bold text-white">Duality AI</h4>
+                <div className="w-32 h-16 rounded-full bg-pink-500/10 flex items-center justify-center">
+                  <Image
+                    src="/DualityLogo.svg"
+                    alt="Duality AI"
+                    width={80}
+                    height={80}
+                    //className="h-6 w-6"
+                  />
+                </div>
               </div>
-              <h4 className="text-xl font-bold mb-3 text-white">
-                Smart City Solutions
-              </h4>
               <p className="text-gray-300">
-                Build intelligent urban infrastructure using IoT and machine learning.
+                Build AI and robotics projects using Duality's Falcon simulator — a high-fidelity digital twin platform for testing autonomous systems in photorealistic virtual worlds.
               </p>
-              <div className="mt-4 text-sm text-pink-400 font-semibold">
-                Sponsored by UrbanTech • Prize: $8,000
+              <div className="mt-4 text-sm text-pink-400 font-semibold pt-6">
+                Sponsored by Duality AI • Prize: ₹17,000
               </div>
             </div>
           </div>
