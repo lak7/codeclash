@@ -44,7 +44,7 @@ export default function TracksSection() {
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-md rounded-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                   <div className="relative">
                     {/* Animated background gradient */}
-                    <div className="absolute -inset-2 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 rounded-xl opacity-60 animate-pulse blur-sm"></div>
+                    {/* <div className="absolute -inset-2 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 rounded-xl opacity-60 animate-pulse blur-sm"></div> */}
                     
                     {/* Content */}
                     <div className="relative bg-black/90 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 transform group-hover:scale-110 transition-transform duration-300">
