@@ -26,7 +26,7 @@ export default function SponsorsSection() {
     },
     {
       name: "Red Bull",
-      logo: "/redbull2.png",
+      logo: "/redbull5.png",
       website: "https://www.redbull.com/in-en",
     },
     {
