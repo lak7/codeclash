@@ -55,6 +55,16 @@ export default function SponsorsSection() {
       logo: "/nonilion.png",
       website: "https://nonilion.com/",
     },
+    {
+      name: "Omnidimension",
+      logo: "/omnidimLogo-bg-new.webp",
+      website: "https://omnidimension.com",
+    },
+    {
+      name: "Duality AI",
+      logo: "/DualityLogo.svg",
+      website: "https://duality.ai",
+    },
   ];
 
   return (
