@@ -77,7 +77,7 @@ export default function TracksSection() {
                 Build AI and robotics projects using Duality's Falcon simulator — a high-fidelity digital twin platform for testing autonomous systems in photorealistic virtual worlds.
               </p>
               <div className="mt-4 text-sm text-pink-400 font-semibold pt-6">
-                Sponsored by Duality AI • Prize: ₹17,000
+                Sponsored by Duality AI • Prize: $200
               </div>
             </div>
           </div>
