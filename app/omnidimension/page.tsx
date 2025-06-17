@@ -238,7 +238,7 @@ export default function OmnidimensionChallenge() {
                 Join with this special link to get extra credits for the OmniDimension platform and boost your development process!
               </p>
               <Link 
-                href="https://www.omnidim.io/refer/code-clash-june-17-june-28" 
+                href="https://www.omnidim.io/" 
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105"
               >
