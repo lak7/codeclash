@@ -21,7 +21,7 @@ export default function TracksSection() {
             <div className="relative bg-black backdrop-blur-sm rounded-md p-6 hover:transform hover:scale-105 transition-all border border-pink-500/20">
               <div className="flex items-center justify-between mb-4">
                 <h4 className="text-xl font-bold text-white">Omnidimension</h4>
-                <div className="w-32 h-16 rounded-full bg-pink-500/10 flex items-center justify-center">
+                <div className="w-32 h-16 rounded-full flex items-center justify-center">
                   <Image
                     src="/omnidimLogo-bg-new.webp"
                     alt="Omnidimension"
@@ -45,7 +45,7 @@ export default function TracksSection() {
             <div className="relative bg-black backdrop-blur-sm rounded-md p-6 hover:transform hover:scale-105 transition-all border border-pink-500/20 pb-6">
               <div className="flex items-center justify-between mb-4">
                 <h4 className="text-xl font-bold text-white">Duality AI</h4>
-                <div className="w-32 h-16 rounded-full bg-pink-500/10 flex items-center justify-center">
+                <div className="w-32 h-16 rounded-full flex items-center justify-center">
                   <Image
                     src="/DualityLogo.svg"
                     alt="Duality AI"

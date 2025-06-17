@@ -1,4 +1,5 @@
 import { Trophy, Medal, Sparkles, Award } from "lucide-react";
+import Image from "next/image";
 
 export default function PrizePoolSection() {
   return (
@@ -123,41 +124,95 @@ export default function PrizePoolSection() {
             </div>
           </div>
 
-          {/* 3rd place - Bronze */}
-          <div className="w-full relative group">
-            {/* Background animations */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 via-amber-700 to-amber-600 rounded-xl blur-xl opacity-10 group-hover:opacity-20 transition-all duration-700 group-hover:scale-105"></div>
+          {/* Sponsor Prizes */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Omnidimension Challenge */}
+            <div className="relative group">
+              {/* Background animations */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 rounded-xl blur-xl opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105"></div>
 
-            <div className="relative w-full rounded-xl border border-amber-600 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 shadow-xl p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left overflow-hidden transition-all duration-500 hover:shadow-[0_0_25px_rgba(217,119,6,0.3)]">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 h-20 w-20 bg-gradient-to-br from-amber-600 to-amber-700 opacity-10 rounded-bl-full"></div>
-              <div className="absolute bottom-0 left-0 h-12 w-12 bg-gradient-to-tr from-amber-600 to-amber-700 opacity-10 rounded-tr-full"></div>
+              <div className="relative w-full rounded-xl border-2 border-pink-500 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 shadow-xl p-6 flex flex-col items-center text-center overflow-hidden transition-all duration-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.3)]">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 h-16 w-16 bg-gradient-to-br from-pink-500 to-purple-500 opacity-10 rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 h-12 w-12 bg-gradient-to-tr from-pink-500 to-purple-500 opacity-10 rounded-tr-full"></div>
 
-              {/* Badge */}
-              <div className="absolute right-5 top-0 bg-gradient-to-r from-amber-600 to-amber-700 text-black px-4 py-1 rounded-b-md font-bold text-sm shadow-lg transform group-hover:scale-105 transition-transform duration-300">
-                🥉 BRONZE
-              </div>
+                {/* Badge */}
+                <div className="absolute right-3 top-0 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 rounded-b-md font-bold text-xs shadow-lg transform group-hover:scale-105 transition-transform duration-300">
+                  🏆 SPONSOR
+                </div>
 
-              {/* Icon container */}
-              <div className="relative mb-6 md:mb-0 md:mr-8">
-                <div className="absolute inset-0 bg-amber-600/10 rounded-full blur-lg animate-pulse"></div>
-                <div className="relative bg-gradient-to-br from-amber-600/10 to-amber-600/5 p-6 rounded-full border border-amber-600/30 shadow-inner">
-                  <Medal className="h-20 w-20 text-amber-600 transform group-hover:scale-110 transition-transform duration-300" />
+                {/* Logo container */}
+                <div className="relative mb-4">
+                  <div className="absolute inset-0 bg-pink-500/10 rounded-full blur-lg animate-pulse"></div>
+                  <div className="relative bg-gradient-to-br from-pink-500/10 to-pink-500/5 p-4 rounded-full border border-pink-500/30 shadow-inner">
+                    <Image
+                      src="/omnidimLogo-bg-new.webp"
+                      alt="Omnidimension"
+                      width={48}
+                      height={48}
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-white mb-1 drop-shadow-md">
+                    Omnidimension Challenge
+                  </h3>
+                  <p className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-2 drop-shadow-xl">
+                    ₹20,000
+                  </p>
+                  <div className="h-px w-3/4 mx-auto bg-gradient-to-r from-pink-500/50 via-pink-500/50 to-transparent my-2"></div>
+                  <p className="text-sm md:text-base font-medium text-gray-300">
+                    Agent collaboration & natural language interfaces
+                  </p>
                 </div>
               </div>
+            </div>
 
-              {/* Content */}
-              <div className="flex-1">
-                <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-1 drop-shadow-md">
-                  2nd Runner-up
-                </h3>
-                <p className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-700 mb-3 drop-shadow-xl">
-                  ₹5,000
-                </p>
-                <div className="h-px w-3/4 mx-auto md:mx-0 bg-gradient-to-r from-amber-600/50 via-amber-600/50 to-transparent my-3"></div>
-                <p className="text-base md:text-lg font-medium text-gray-300">
-                  Cash Prize + Goodies + Certificate of Excellence
-                </p>
+            {/* Duality AI */}
+            <div className="relative group">
+              {/* Background animations */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 rounded-xl blur-xl opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105"></div>
+
+              <div className="relative w-full rounded-xl border-2 border-blue-500 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 shadow-xl p-6 flex flex-col items-center text-center overflow-hidden transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 h-16 w-16 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-10 rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 h-12 w-12 bg-gradient-to-tr from-blue-500 to-cyan-500 opacity-10 rounded-tr-full"></div>
+
+                {/* Badge */}
+                <div className="absolute right-3 top-0 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-b-md font-bold text-xs shadow-lg transform group-hover:scale-105 transition-transform duration-300">
+                  🏆 SPONSOR
+                </div>
+
+                {/* Logo container */}
+                <div className="relative mb-4">
+                  <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-lg animate-pulse"></div>
+                  <div className="relative bg-gradient-to-br from-blue-500/10 to-blue-500/5 p-4 rounded-full border border-blue-500/30 shadow-inner">
+                    <Image
+                      src="/DualityLogo.svg"
+                      alt="Duality AI"
+                      width={48}
+                      height={48}
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-white mb-1 drop-shadow-md">
+                    Duality AI Challenge
+                  </h3>
+                  <p className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2 drop-shadow-xl">
+                    ₹17,000
+                  </p>
+                  <div className="h-px w-3/4 mx-auto bg-gradient-to-r from-blue-500/50 via-blue-500/50 to-transparent my-2"></div>
+                  <p className="text-sm md:text-base font-medium text-gray-300">
+                    AI & robotics with Falcon simulator
+                  </p>
+                </div>
               </div>
             </div>
           </div>
