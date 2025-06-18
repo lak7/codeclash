@@ -19,7 +19,7 @@ export default function TracksSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-md animate-border-move"></div>
-            <Link href="/omnidimension" className="block">
+            <Link href="/omnidimension" target="_blank" className="block">
               <div className="relative bg-black backdrop-blur-sm rounded-md p-6 transition-all border border-pink-500/20 cursor-pointer group">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-xl font-bold text-white">Omnidimension</h4>
