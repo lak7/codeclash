@@ -15,28 +15,62 @@ export default function DualityChallenge() {
             Back to Tracks
           </Link>
           
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="text-white">Duality AI</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500"> Space Station</span>
-                <span className="text-white block">Hackathon</span>
-              </h1>
-              <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                Train cutting-edge AI models for Object Detection in a space station environment using Duality AI's synthetic dataset from their digital twin simulation platform - Falcon.
-              </p>
-              <div className="flex items-center gap-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
-                <span>Prize Pool: ₹20,000</span>
-              </div>
-            </div>
-            
-            <div className="w-48 h-24 relative">
+          <div className="relative">
+            {/* Logo positioned at top right */}
+            <div className="absolute top-0 right-0 w-48 h-24 hidden md:block">
               <Image
                 src="/DualityLogo.svg"
                 alt="Duality AI"
                 fill
                 className="object-contain"
               />
+            </div>
+            
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 md:pr-48">
+                <span className="text-white">Duality AI</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500"> Space Station</span>
+                <span className="text-white block">Hackathon</span>
+              </h1>
+              
+              {/* Mobile logo */}
+              <div className="flex justify-center md:hidden mb-6">
+                <div className="w-48 h-24 relative">
+                  <Image
+                    src="/DualityLogo.svg"
+                    alt="Duality AI"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              
+              <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                Train cutting-edge AI models for Object Detection in a space station environment using Duality AI's synthetic dataset from their digital twin simulation platform - Falcon.
+              </p>
+              <div className="flex items-center gap-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-8">
+                <span>Prize Pool: ₹17,000</span>
+              </div>
+              
+              {/* Join Platform Button */}
+              <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                    <span className="text-xl">🚀</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Ready to Launch?</h3>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Join Duality AI's Falcon platform and start training your space station object detection model!
+                </p>
+                <Link 
+                  href="https://falcon.duality.ai/auth/sign-up?utm_source=hackathon&utm_medium=instructions&utm_campaign=codeclash" 
+                  target="_blank"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105"
+                >
+                  🛰️ Join Falcon Platform - Start Training
+                </Link>
+              </div>
             </div>
           </div>
         </div>

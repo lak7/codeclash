@@ -15,27 +15,62 @@ export default function OmnidimensionChallenge() {
             Back to Tracks
           </Link>
           
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="text-white">Omnidimension</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500"> Challenge</span>
-              </h1>
-              <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                Design the interface, orchestrate agent collaboration, and enable real-time execution of actions like phone calls, bookings, and follow-ups — all triggered by natural language instructions.
-              </p>
-              <div className="flex items-center gap-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                <span>Prize Pool: ₹20,000</span>
-              </div>
-            </div>
-            
-            <div className="w-48 h-24 relative">
+          <div className="relative">
+            {/* Logo positioned at top right */}
+            <div className="absolute top-0 right-0 w-48 h-24 hidden md:block">
+        
               <Image
                 src="/omnidimLogo-bg-new.webp"
                 alt="Omnidimension"
                 fill
                 className="object-contain"
               />
+            </div>
+            
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 md:pr-48">
+                <span className="text-white">Omnidimension</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500"> Challenge</span>
+              </h1>
+              
+              {/* Mobile logo */}
+              <div className="flex justify-center md:hidden mb-6">
+                <div className="w-48 h-24 relative">
+                  <Image
+                    src="/omnidimLogo-bg-new.webp"
+                    alt="Omnidimension"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              
+              <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                Design the interface, orchestrate agent collaboration, and enable real-time execution of actions like phone calls, bookings, and follow-ups — all triggered by natural language instructions.
+              </p>
+              <div className="flex items-center gap-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-8">
+                <span>Prize Pool: ₹20,000</span>
+              </div>
+              
+              {/* Join Platform Button */}
+              <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-pink-500/30 rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-pink-500/20 flex items-center justify-center">
+                    <span className="text-xl">🎁</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Special Offer!</h3>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Join with this special link to get extra credits for the OmniDimension platform and boost your development!
+                </p>
+                <Link 
+                  href="https://www.omnidim.io/" 
+                  target="_blank"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105"
+                >
+                  🚀 Get Extra Credits - Join OmniDimension
+                </Link>
+              </div>
             </div>
           </div>
         </div>
