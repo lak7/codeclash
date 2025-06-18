@@ -206,7 +206,7 @@ export default function PrizePoolSection() {
                     Duality AI Challenge
                   </h3>
                   <p className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2 drop-shadow-xl">
-                    ₹17,000
+                    $200
                   </p>
                   <div className="h-px w-3/4 mx-auto bg-gradient-to-r from-blue-500/50 via-blue-500/50 to-transparent my-2"></div>
                   <p className="text-sm md:text-base font-medium text-gray-300">
