@@ -60,26 +60,43 @@ export default function TracksSection() {
 
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-md animate-border-move" style={{animationDelay: '1.5s'}}></div>
-            <div className="relative bg-black backdrop-blur-sm rounded-md p-6 hover:transform hover:scale-105 transition-all border border-pink-500/20 pb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h4 className="text-xl font-bold text-white">Duality AI</h4>
-                <div className="w-32 h-16 rounded-full flex items-center justify-center">
-                  <Image
-                    src="/DualityLogo.svg"
-                    alt="Duality AI"
-                    width={80}
-                    height={80}
-                    //className="h-6 w-6"
-                  />
+            <Link href="/duality" target="_blank" className="block">
+              <div className="relative bg-black backdrop-blur-sm rounded-md p-6 transition-all border border-pink-500/20 cursor-pointer group pb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-xl font-bold text-white">Duality AI</h4>
+                  <div className="w-32 h-16 rounded-full flex items-center justify-center">
+                    <Image
+                      src="/DualityLogo.svg"
+                      alt="Duality AI"
+                      width={80}
+                      height={80}
+                      //className="h-6 w-6"
+                    />
+                  </div>
+                </div>
+                <p className="text-gray-300">
+                  Build AI and robotics projects using Duality's Falcon simulator — a high-fidelity digital twin platform for testing autonomous systems in photorealistic virtual worlds.
+                </p>
+                <div className="mt-4 text-sm text-pink-400 font-semibold pt-6">
+                  Sponsored by Duality AI • Prize: $200
+                </div>
+                
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-md rounded-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                  <div className="relative">
+                    {/* Animated background gradient */}
+                    {/* <div className="absolute -inset-2 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 rounded-xl opacity-60 animate-pulse blur-sm"></div> */}
+                    
+                    {/* Content */}
+                    <div className="relative bg-black/90 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 transform group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-lg tracking-wide">
+                        View Details
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p className="text-gray-300">
-                Build AI and robotics projects using Duality's Falcon simulator — a high-fidelity digital twin platform for testing autonomous systems in photorealistic virtual worlds.
-              </p>
-              <div className="mt-4 text-sm text-pink-400 font-semibold pt-6">
-                Sponsored by Duality AI • Prize: $200
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
 
