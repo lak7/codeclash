@@ -24,7 +24,7 @@ export default function Home() {
       {/* About Section */}
       <AboutSection />
 
-      {/* Tracks Section */}
+      {/* Tracks Section */} 
       <TracksSection />
 
       {/* Prize Pool Section */}

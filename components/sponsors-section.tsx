@@ -67,7 +67,7 @@ export default function SponsorsSection() {
     },
     {
       name: "Innoplexus",
-      logo: "/inno.jpg",
+      logo: "/inno.png",
       website: "https://www.innoplexus.com/",
     },
   ];
