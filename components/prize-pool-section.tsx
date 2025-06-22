@@ -143,16 +143,13 @@ export default function PrizePoolSection() {
 
                 {/* Logo container */}
                 <div className="relative mb-4">
-                  <div className="absolute inset-0 bg-pink-500/10 rounded-full blur-lg animate-pulse"></div>
-                  <div className="relative bg-gradient-to-br from-pink-500/10 to-pink-500/5 p-4 rounded-full border border-pink-500/30 shadow-inner">
-                    <Image
-                      src="/omnidimLogo-bg-new.webp"
-                      alt="Omnidimension"
-                      width={48}
-                      height={48}
-                      className="h-12 w-auto"
-                    />
-                  </div>
+                  <Image
+                    src="/omni.png"
+                    alt="Omnidimension"
+                    width={120}
+                    height={120}
+                    className="h-32 w-auto object-contain"
+                  />
                 </div>
 
                 {/* Content */}
@@ -188,16 +185,13 @@ export default function PrizePoolSection() {
 
                 {/* Logo container */}
                 <div className="relative mb-4">
-                  <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-lg animate-pulse"></div>
-                  <div className="relative bg-gradient-to-br from-blue-500/10 to-blue-500/5 p-4 rounded-full border border-blue-500/30 shadow-inner">
-                    <Image
-                      src="/DualityLogo.svg"
-                      alt="Duality AI"
-                      width={48}
-                      height={48}
-                      className="h-12 w-auto"
-                    />
-                  </div>
+                  <Image
+                    src="/dual.png"
+                    alt="Duality AI"
+                    width={120}
+                    height={120}
+                    className="h-32 w-auto object-contain"
+                  />
                 </div>
 
                 {/* Content */}
@@ -206,7 +200,7 @@ export default function PrizePoolSection() {
                     Duality AI Challenge
                   </h3>
                   <p className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2 drop-shadow-xl">
-                    $200
+                  ₹17,000
                   </p>
                   <div className="h-px w-3/4 mx-auto bg-gradient-to-r from-blue-500/50 via-blue-500/50 to-transparent my-2"></div>
                   <p className="text-sm md:text-base font-medium text-gray-300">

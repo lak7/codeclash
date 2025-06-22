@@ -47,7 +47,7 @@ export const teamMembers: TeamMember[] = [
     name: "Aditya Batra",
     role: "Operations-Lead",
     bio: "As the Operations Lead for CodeClash, Aditya Batra is actively overseeing the smooth execution of the event. From managing logistics and handling on-ground coordination to ensuring that every element is in place, his efforts are playing a key role in keeping everything on track. His dedication and leadership continue to drive the event forward successfully.",
-    imageUrl: "/batra.jpg",
+    imageUrl: "/batra.png",
     linkedinUrl: "https://www.linkedin.com/in/adityabatra072",
   },
   // {
