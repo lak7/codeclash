@@ -147,7 +147,7 @@ export default function Round1Results() {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-3">
+                  {/* <div className="flex items-center space-x-3">
                     <Mail className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <div className="min-w-0 flex-1">
                       <p className="text-sm text-gray-400">Email</p>
@@ -155,9 +155,9 @@ export default function Round1Results() {
                         {team.candidate_email}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
-                  {team.candidate_mobile && (
+                  {/* {team.candidate_mobile && (
                     <div className="flex items-center space-x-3">
                       <div className="h-4 w-4 text-green-400 flex-shrink-0">📱</div>
                       <div>
@@ -165,7 +165,7 @@ export default function Round1Results() {
                         <p className="text-white font-medium">{team.candidate_mobile}</p>
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   {team.created_at && (
                     <div className="pt-2 border-t border-gray-700">
