@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 
-export async function GET() {
+export async function GET() { 
   try {
     // Read the CSV file from the public directory
     const csvPath = path.join(process.cwd(), 'public', 'results', 'shortlisted_team_leaders.csv')
@@ -52,8 +52,6 @@ export async function GET() {
           id: index + 1,
           team_name: cleanColumn(columns[0]) || '',
           candidate_name: cleanColumn(columns[1]) || '',
-          candidate_email: cleanColumn(columns[2]) || '',
-          candidate_mobile: mobile || '',
           created_at: new Date().toISOString() // Default timestamp
         }
       }
