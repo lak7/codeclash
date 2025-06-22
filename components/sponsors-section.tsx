@@ -65,6 +65,11 @@ export default function SponsorsSection() {
       logo: "/DualityLogo.svg",
       website: "https://duality.ai",
     },
+    {
+      name: "Innoplexus",
+      logo: "/inno.jpg",
+      website: "https://www.innoplexus.com/",
+    },
   ];
 
   return (
