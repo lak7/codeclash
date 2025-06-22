@@ -10,10 +10,10 @@ import { toast } from 'sonner';
 
 export function TeamForm() {
   const [formData, setFormData] = useState({
-    teamName: '',
-    candidateName: '',
+    team_name: '',
+    candidate_name: '',
     email: '',
-    phoneNumber: '',
+    phone_number: '',
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,10 +36,10 @@ export function TeamForm() {
       
       // Reset form
       setFormData({
-        teamName: '',
-        candidateName: '',
+        team_name: '',
+        candidate_name: '',
         email: '',
-        phoneNumber: '',
+        phone_number: '',
       });
     } catch (error) {
       console.error('Failed to create team:', error);
@@ -57,12 +57,12 @@ export function TeamForm() {
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="teamName">Team Name</Label>
+            <Label htmlFor="team_name">Team Name</Label>
             <Input
-              id="teamName"
-              name="teamName"
+              id="team_name"
+              name="team_name"
               type="text"
-              value={formData.teamName}
+              value={formData.team_name}
               onChange={handleInputChange}
               required
               placeholder="Enter team name"
@@ -70,12 +70,12 @@ export function TeamForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="candidateName">Candidate Name (Team Leader)</Label>
+            <Label htmlFor="candidate_name">Candidate Name (Team Leader)</Label>
             <Input
-              id="candidateName"
-              name="candidateName"
+              id="candidate_name"
+              name="candidate_name"
               type="text"
-              value={formData.candidateName}
+              value={formData.candidate_name}
               onChange={handleInputChange}
               required
               placeholder="Enter candidate name"
@@ -96,12 +96,12 @@ export function TeamForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phoneNumber">Phone Number (Optional)</Label>
+            <Label htmlFor="phone_number">Phone Number (Optional)</Label>
             <Input
-              id="phoneNumber"
-              name="phoneNumber"
+              id="phone_number"
+              name="phone_number"
               type="tel"
-              value={formData.phoneNumber}
+              value={formData.phone_number}
               onChange={handleInputChange}
               placeholder="Enter phone number"
             />

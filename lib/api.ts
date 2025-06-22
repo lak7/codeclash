@@ -1,5 +1,5 @@
 // API utility functions for teams
-import type { Team } from '@prisma/client';
+import type { Team } from '@/lib/supabase';
 
 // Teams API functions
 export const teamsApi = {
@@ -14,10 +14,10 @@ export const teamsApi = {
 
   // Create a new team
   create: async (data: {
-    teamName: string;
-    candidateName: string;
+    team_name: string;
+    candidate_name: string;
     email: string;
-    phoneNumber?: string;
+    phone_number?: string;
   }): Promise<Team> => {
     const response = await fetch('/api/teams', {
       method: 'POST',
