@@ -25,14 +25,14 @@ export const teamMembers: TeamMember[] = [
     imageUrl: "/shivansh.png",
     linkedinUrl: "https://www.linkedin.com/in/shivansh-das/",
   },
-  {
-    id: 3,
-    name: "Paanav Puri",
-    role: "Event Management Lead",
-    bio: "As the Event Management Lead for CodeClash, Paanav excels in planning and executing impactful events that foster learning and collaboration among tech enthusiasts. His dedication to teamwork and meticulous attention to detail ensure the success of every initiative he undertakes, driving the vision of the society forward.",
-    imageUrl: "/paanav.png",
-    linkedinUrl: "https://www.linkedin.com/in/paanav-puri-708003257",
-  },
+  // {
+  //   id: 3,
+  //   name: "Paanav Puri",
+  //   role: "Event Management Lead",
+  //   bio: "As the Event Management Lead for CodeClash, Paanav excels in planning and executing impactful events that foster learning and collaboration among tech enthusiasts. His dedication to teamwork and meticulous attention to detail ensure the success of every initiative he undertakes, driving the vision of the society forward.",
+  //   imageUrl: "/paanav.png",
+  //   linkedinUrl: "https://www.linkedin.com/in/paanav-puri-708003257",
+  // },
   {
     id: 4,
     name: "Aayush Raj",

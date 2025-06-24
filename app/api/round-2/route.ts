@@ -5,7 +5,7 @@ import path from 'path'
 export async function GET() {  
   try {
     // Read the CSV file from the public directory
-    const csvPath = path.join(process.cwd(), 'public', 'results', 'shortlisted_team_leaders.csv')
+    const csvPath = path.join(process.cwd(), 'public', 'results', 'mrfinal.csv')
     
     if (!fs.existsSync(csvPath)) {
       return NextResponse.json(
@@ -40,18 +40,11 @@ export async function GET() {
       // Clean up the data
       const cleanColumn = (col: string) => col.replace(/^"|"$/g, '').trim()
       
-      if (columns.length >= 4) {
-        // Handle scientific notation in mobile numbers
-        let mobile = cleanColumn(columns[3])
-        if (mobile.includes('E+')) {
-          // Convert scientific notation to regular number
-          mobile = parseFloat(mobile).toFixed(0)
-        }
-        
+      if (columns.length >= 2) {
         return {
           id: index + 1,
           team_name: cleanColumn(columns[0]) || '',
-          candidate_name: cleanColumn(columns[1]) || '',
+          leader_name: cleanColumn(columns[1]) || '',
           created_at: new Date().toISOString() // Default timestamp
         }
       }

@@ -70,7 +70,7 @@ export default function Round1Results() {
             <div className="flex items-center justify-center mb-6">
               <Trophy className="h-12 w-12 text-pink-500 mr-4" />
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-                Round 1 Results
+                Idea Submission Results
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
