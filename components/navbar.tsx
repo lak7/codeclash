@@ -21,6 +21,7 @@ export default function Navbar() {
   const resultsItems = [
     { name: "Idea Submission", href: "/results/round-1" },
     { name: "Prototype Presentation", href: "/results/prototype-presentation" },
+    { name: "Finalists", href: "/results/finalists" },
   ];
 
   // Handle navigation (both anchor scroll and route navigation)
