@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: "Idea Submission", href: "/results/round-1" },
     { name: "Prototype Presentation", href: "/results/prototype-presentation" },
     { name: "Finalists", href: "/results/finalists" },
+    { name: "Wild Card Entries", href: "/results/wild-card" },
   ];
 
   // Handle navigation (both anchor scroll and route navigation)
