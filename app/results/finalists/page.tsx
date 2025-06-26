@@ -6,13 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Search, Users, Trophy, User, Building2, Star } from 'lucide-react'
 import { toast } from 'sonner'
-
-interface FinalistData {
-  id: number
-  team_name: string
-  leader_name: string
-  created_at: string
-}
+import { FinalistData } from '@/lib/finalists-data'
 
 export default function FinalistsResults() {
   const [teams, setTeams] = useState<FinalistData[]>([])
