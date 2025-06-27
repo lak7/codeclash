@@ -83,12 +83,6 @@ export default function WildCardResults() {
           </div>
         </div>
 
-        {/* Results Count */}
-        <div className="text-center mb-8">
-          <p className="text-gray-400">
-            Showing {filteredTeams.length} of {wildCardTeams.length} wild card teams
-          </p>
-        </div>
 
         {/* Teams Grid */}
         {filteredTeams.length === 0 ? (
