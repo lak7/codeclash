@@ -32,16 +32,7 @@ export const teamMembers: TeamMember[] = [
   //   bio: "As the Event Management Lead for CodeClash, Paanav excels in planning and executing impactful events that foster learning and collaboration among tech enthusiasts. His dedication to teamwork and meticulous attention to detail ensure the success of every initiative he undertakes, driving the vision of the society forward.",
   //   imageUrl: "/paanav.png",
   //   linkedinUrl: "https://www.linkedin.com/in/paanav-puri-708003257",
-  // },
-  {
-    id: 4,
-    name: "Aayush Raj",
-    role: "Creative Lead",
-    bio: "Aayush, as the Creative Lead for CodeClash, combines his technical skills with a strong creative vision.With a deep passion for design and innovation, Aayush leads the creative direction of the society's projects, ensuring that every initiative is visually captivating and impactful.",
-    imageUrl: "/aayush.png",
-    linkedinUrl: "https://www.linkedin.com/in/aayushraj1404/",
-  },
-
+    // },
   {
     id: 6,
     name: "Aditya Batra",

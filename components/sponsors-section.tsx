@@ -3,72 +3,127 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function SponsorsSection() {
-  const sponsors = [
+  const sponsorCategories = [
     {
-      name: "Codecrafters",
-      logo: "/codecraft.png",
-      website: "https://codecrafters.io",
+      title: "GOLD PARTNER",
+      sponsors: [
+        {
+          name: "Powergrid",
+          logo: "/powergrid.png",
+          website: "https://www.powergrid.in/",
+        },
+      ],
     },
     {
-      name: "Powergrid",
-      logo: "/powergrid.png",
-      website: "https://www.powergrid.in/",
+      title: "POWERED BY PARTNER",
+      sponsors: [
+        {
+          name: "Unstop",
+          logo: "/unstop-white.png",
+          website: "https://unstop.com/",
+        },
+      ],
     },
     {
-      name: "Physics Wallah",
-      logo: "/physics.png",
-      website: "https://www.pw.live/",
+      title: "EVENT PARTNER",
+      sponsors: [
+        {
+          name: "Genesis",
+          logo: "/genesis.png",
+          website:
+            "https://www.instagram.com/zk_genesis?utm_source=qr&igsh=MWR0MjFsMWNpaWQ1dA==",
+        },
+      ],
     },
     {
-      name: "AllTripp",
-      logo: "/alltrip.png",
-      website: "https://alltripp-travel.vercel.app/",
+      title: "PLATFORM PARTNER",
+      sponsors: [
+        {
+          name: "Nonilion",
+          logo: "/nonilion.png",
+          website: "https://nonilion.com/",
+        },
+        {
+          name: "GitHub",
+          logo: "/github.png",
+          website: "https://github.com/",
+        },
+      ],
     },
     {
-      name: "Red Bull",
-      logo: "/redbull5.png",
-      website: "https://www.redbull.com/in-en",
+      title: "LEARNING PARTNER",
+      sponsors: [
+        {
+          name: "Physics Wallah",
+          logo: "/physics.png",
+          website: "https://www.pw.live/",
+        },
+      ],
     },
     {
-      name: "GitHub",
-      logo: "/github.png",
-      website: "https://github.com/",
+      title: "TRACK PARTNER",
+      sponsors: [
+        {
+          name: "Omnidimension",
+          logo: "/omnidimLogo-bg-new.webp",
+          website: "https://omnidimension.com",
+        },
+        {
+          name: "Duality AI",
+          logo: "/DualityLogo.svg",
+          website: "https://duality.ai",
+        },
+      ],
     },
     {
-      name: "Genesis",
-      logo: "/genesis.png",
-      website:
-        "https://www.instagram.com/zk_genesis?utm_source=qr&igsh=MWR0MjFsMWNpaWQ1dA==",
+      title: "ASSOCIATE PARTNER",
+      sponsors: [
+        {
+          name: "OpenBuild",
+          logo: "/openbuild.jpg",
+          website: "https://openbuild.xyz/",
+        },
+        {
+          name: "AllTripp",
+          logo: "/alltrip.png",
+          website: "https://alltripp-travel.vercel.app/",
+        },
+      ],
     },
     {
-      name: "Geek Room",
-      logo: "/geek.png",
-      website: "https://www.geekroom.in/",
+      title: "COMMUNITY PARTNER",
+      sponsors: [
+        {
+          name: "Geek Room",
+          logo: "/geek.png",
+          website: "https://www.geekroom.in/",
+        },
+      ],
     },
     {
-      name: "Unstop",
-      logo: "/unstop-white.png",
-      website: "https://unstop.com/",
+      title: "PRIZE PARTNER",
+      sponsors: [
+        {
+          name: "Codecrafters",
+          logo: "/codecraft.png",
+          website: "https://codecrafters.io",
+        },
+        {
+          name: "Innoplexus",
+          logo: "/ino.png",
+          website: "https://www.innoplexus.com/",
+        },
+      ],
     },
     {
-      name: "Nonilion",
-      logo: "/nonilion.png",
-      website: "https://nonilion.com/",
-    },
-    {
-      name: "Omnidimension",
-      logo: "/omnidimLogo-bg-new.webp",
-      website: "https://omnidimension.com",
-    },
-    {
-      name: "Duality AI",
-      logo: "/DualityLogo.svg",
-      website: "https://duality.ai",
-    },
-    {
-      name: "Innoplexus",
-      logo: "/inno.png",
-      website: "https://www.innoplexus.com/",
+      title: "BEVERAGE PARTNER",
+      sponsors: [
+        {
+          name: "Red Bull",
+          logo: "/redbull5.png",
+          website: "https://www.redbull.com/in-en",
+        },
+      ],
     },
   ];
 
@@ -104,31 +159,40 @@ export default function SponsorsSection() {
           </p>
         </div>
 
-        <div className="flex justify-center flex-wrap gap-8">
-          {sponsors.map((sponsor, index) => (
-            <div
-              key={index}
-              className="group relative flex flex-col items-center"
-            >
-              <Link
-                href={sponsor.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cursor-pointer transition-transform hover:scale-105"
-                title={`Visit ${sponsor.name}'s website`}
-              >
-                <div className="w-48 aspect-square relative mb-4 overflow-hidden">
-                  <Image
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    fill
-                    className="object-contain p-6 transition-transform duration-300"
-                  />
-                </div>
-                <span className="text-white font-semibold text-center block">
-                  {sponsor.name}
-                </span>
-              </Link>
+        <div className="space-y-12">
+          {sponsorCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="text-center">
+              <h3 className="text-xl md:text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                {category.title}
+              </h3>
+              <div className="flex justify-center flex-wrap gap-6 md:gap-8">
+                {category.sponsors.map((sponsor, sponsorIndex) => (
+                  <div
+                    key={sponsorIndex}
+                    className="group relative flex flex-col items-center"
+                  >
+                    <Link
+                      href={sponsor.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer transition-transform hover:scale-105"
+                      title={`Visit ${sponsor.name}'s website`}
+                    >
+                      <div className="w-32 md:w-40 lg:w-48 aspect-square relative mb-4 overflow-hidden bg-white/5 rounded-lg border border-pink-500/20 hover:border-pink-500/40 transition-colors">
+                        <Image
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          fill
+                          className="object-contain p-4 md:p-6 transition-transform duration-300"
+                        />
+                      </div>
+                      <span className="text-white font-semibold text-center block text-sm md:text-base">
+                        {sponsor.name}
+                      </span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
