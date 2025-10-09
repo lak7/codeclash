@@ -18,6 +18,14 @@ export const teamMembers: TeamMember[] = [
     linkedinUrl: "https://www.linkedin.com/in/lak7/",
   },
   {
+    id: 9,
+    name: "Riya Ghaloth",
+    role: "Organizing-Lead",
+    bio: "As the Organizing Lead for CodeClash, Riya Ghaloth is actively overseeing the smooth execution of the event. From managing logistics and handling on-ground coordination to ensuring that every element is in place, her efforts are playing a key role in keeping everything on track. Her dedication and leadership continue to drive the event forward successfully.",
+    imageUrl: "/riya.png",
+    linkedinUrl: "https://www.linkedin.com/in/riyaghaloth/",
+  },
+  {
     id: 2,
     name: "Shivansh Das",
     role: "Lead",
@@ -33,6 +41,7 @@ export const teamMembers: TeamMember[] = [
   //   imageUrl: "/paanav.png",
   //   linkedinUrl: "https://www.linkedin.com/in/paanav-puri-708003257",
     // },
+    
   {
     id: 6,
     name: "Aditya Batra",
@@ -41,6 +50,7 @@ export const teamMembers: TeamMember[] = [
     imageUrl: "/batra.png",
     linkedinUrl: "https://www.linkedin.com/in/adityabatra072",
   },
+  
   // {
   //   id: 7,
   //   name: "Mayank Goel",
