@@ -5,7 +5,7 @@ This document outlines the database schema for the CodeClash application using S
 ## Tables
 
 ### teams
-Table for storing team registration data.
+Table for storing team registration.
 
 ```sql
 CREATE TABLE teams (
